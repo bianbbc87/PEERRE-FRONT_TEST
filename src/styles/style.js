@@ -6,6 +6,22 @@ export const Sample = styled.div`
   background-color: ${({ theme }) => theme.colors.darkGray};
 `;
 
+/* 전체 */
+// 기본 wrapper
+export const Wrapper = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  min-height: 99vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  background-color: ${({ theme }) => theme.background.mainBg};
+  align-items: center;
+  text-align: center;
+`;
+
 /**  유저 정보 페이지 스타일 **/
 // ...
 

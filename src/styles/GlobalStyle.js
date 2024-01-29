@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 body {
     font-family: 'Noto Sans KR';
-    margin: 0;
+    margin: 0 auto;
     font-size: 16px;
 }
 `;
