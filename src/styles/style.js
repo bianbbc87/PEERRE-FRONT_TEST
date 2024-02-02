@@ -12,8 +12,6 @@ export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   width: 100vw;
-  height: 100vh;
-  min-height: 99vh;
   display: flex;
 `;
 
@@ -22,6 +20,7 @@ top: 0;
 left: 0;
 width: 240px;;
 height: 100%;
+min-height: 100vh;
 background-color: yellow;
 margin: 0;
 `;
@@ -29,6 +28,7 @@ margin: 0;
 export const RightBody = styled.div`
 flex-grow: 1; /* 남은 공간을 전부 차지한다. */
 height: 100%;
+min-height: 100vh;
 margin: 0;
 `;
 
