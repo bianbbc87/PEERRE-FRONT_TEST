@@ -27,18 +27,22 @@ export default function SideBar() {
         <Hr top="10px"/>
         <div onClick={() => navigate("/회고")}>
         <SideBarButtonStyle text="회고" path={"/회고"}/>
+        <Hr />
         </div>
         <div onClick={() => navigate("/개인리포트")}>
         <SideBarButtonStyle text="개인 리포트" path={"/개인리포트"}/>
+        <Hr />
         </div>
         <div onClick={() => navigate("/피드백관리")}>
         <SideBarButtonStyle text="피드백 관리" path={"/피드백관리"}/>
+        <Hr />
         </div>
         <div onClick={() => navigate("/알림")}>
         <SideBarButtonStyle text="알림" path={"/알림"}/>
+        <Hr />
         </div>
     </ButtonListBox>
-    <Hr top="150px"/>
+    <Hr top="120px"/>
     <HelperListBox>
         <div onClick={() => navigate("/도움말")}>
             <HelperButton text="도움말" />
@@ -125,8 +129,10 @@ export const ButtonImage = styled.div`
 `;
 
 export const Hr = styled.hr`
-  width: 90%;
-  color: #d9d9d9;
+  width: 95%;
+  height: 1px;
+  border: 0;
+  background-color: #bdbdbd;
   margin-top: ${(props) => props.top || "0"};
 `;
 

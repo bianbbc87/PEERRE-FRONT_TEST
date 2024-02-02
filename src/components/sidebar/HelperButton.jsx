@@ -14,8 +14,9 @@ export const ButtonWrapper = styled.button`
   max-width: 100%;
   display: flex;
   font-size: 14px;
-  color: gray;
+  color: #bdbdbd;
   margin-top: 7px;
+  align-items: center;
 `;
 
 export const ButtonImage = styled.div`
