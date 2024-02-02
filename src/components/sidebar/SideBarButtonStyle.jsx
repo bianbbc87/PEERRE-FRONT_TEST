@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 export default function SideBarButtonStyle({ text }) {
   return (
@@ -33,3 +34,7 @@ export const EmptyImage = styled.div`
   width: 35px;
   height: 35px;
 `;
+
+SideBarButtonStyle.propTypes = {
+    text: PropTypes.string,
+  };

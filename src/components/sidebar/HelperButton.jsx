@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 export default function HelperButton({ text }) {
   return (
@@ -23,3 +24,7 @@ export const ButtonImage = styled.div`
   background-color: green;
   margin-right: 10px;
 `;
+
+HelperButton.propTypes = {
+    text: PropTypes.string,
+  };
