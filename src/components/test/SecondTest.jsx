@@ -1,4 +1,4 @@
-import useStore from "@/stores/test/store.js";
+import useStore from "/src/stores/test/store.js";
 
 function SecondTest() {
     // useStore로 store 값 가져오기
