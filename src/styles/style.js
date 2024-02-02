@@ -6,8 +6,7 @@ export const Sample = styled.div`
   background-color: ${({ theme }) => theme.colors.darkGray};
 `;
 
-/* 전체 */
-// 기본 wrapper
+/* 전체(수정 X) */
 export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
@@ -46,4 +45,14 @@ height: 100%;
 background-color: white;
 z-index: 100;
 margin: 0;
+`;
+
+/* team-report */
+
+export const Container = styled.div`
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
 `;
