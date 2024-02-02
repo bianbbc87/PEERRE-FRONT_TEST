@@ -18,6 +18,27 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+
+@media (min-width: 576px) {
+    max-width: 540px;
+}
+
+@media (min-width: 768px) {
+    max-width: 720px;
+}
+
+@media (min-width: 992px) {
+    max-width: 960px;
+}
+
+@media (min-width: 1200px) {
+    max-width: 1140px;
+}
+
+@media (min-width: 1460px) {
+    max-width: 1440px;
+}
 `;
 
 /**  유저 정보 페이지 스타일 **/
