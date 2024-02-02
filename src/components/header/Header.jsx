@@ -55,6 +55,7 @@ display: flex;
 flex-direction: column;
 text-align: left;
 line-height: 1.5;
+pointer-events: none;
 
 font-size: 13px;
 font-weight: 400;

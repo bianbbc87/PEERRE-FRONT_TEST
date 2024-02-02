@@ -68,6 +68,7 @@ flex-direction: column;
 text-align: left;
 padding: 0 10px;
 line-height: 1.5;
+pointer-events: none;
 
 p {
     font-size: 20px;
@@ -87,7 +88,7 @@ export const ButtonListBox= styled.div`
   flex-direction: column;
 `;
 
-export const ButtonHoverStyle = styled.div`
+export const ButtonHoverStyle = styled.button`
 margin-top: 35px;
   max-width: 100%;
   display: flex;
@@ -129,7 +130,7 @@ export const CreateTeamImage = styled.div`
   background-color: green;
 `;
 
-export const CreateTeamButton = styled.div`
+export const CreateTeamButton = styled.button`
 max-width: 100%;
 padding: 20px;
 text-align: left;
