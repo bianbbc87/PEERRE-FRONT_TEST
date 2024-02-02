@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import SideBarButtonStyle from "/src/components/sidebar/SideBarButtonStyle";
 import HelperButton from "/src/components/sidebar/HelperButton";
+import { useNavigate } from "react-router-dom";
 
 export default function SideBar() {
+    const navigate = useNavigate();
+
   return (
     <Body>
    <BarHeader>
@@ -22,17 +25,29 @@ export default function SideBar() {
             <ButtonImage />
         </ButtonHoverStyle>
         <Hr top="10px"/>
-        <SideBarButtonStyle text="회고"/>
-        <SideBarButtonStyle text="회고"/>
-        <SideBarButtonStyle text="회고"/>
-        <SideBarButtonStyle text="알림"/>
+        <div onClick={() => navigate("/회고")}>
+        <SideBarButtonStyle text="회고" path={"/회고"}/>
+        </div>
+        <div onClick={() => navigate("/개인리포트")}>
+        <SideBarButtonStyle text="개인 리포트" path={"/개인리포트"}/>
+        </div>
+        <div onClick={() => navigate("/피드백관리")}>
+        <SideBarButtonStyle text="피드백 관리" path={"/피드백관리"}/>
+        </div>
+        <div onClick={() => navigate("/알림")}>
+        <SideBarButtonStyle text="알림" path={"/알림"}/>
+        </div>
     </ButtonListBox>
     <Hr top="150px"/>
     <HelperListBox>
+        <div onClick={() => navigate("/도움말")}>
             <HelperButton text="도움말" />
+            </div>
+            <div onClick={() => alert("로그아웃 버튼을 클릭하였습니다. ")}>
             <HelperButton text="로그아웃" />
+            </div>
         </HelperListBox>
-        <CreateTeamButton>
+        <CreateTeamButton onClick={() => alert("팀 스페이스 생성을 클릭하였습니다.")}>
             <CreateTeamImage/>
             팀 스페이스 생성
         </CreateTeamButton>

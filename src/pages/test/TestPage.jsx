@@ -1,12 +1,10 @@
-import { Sample, MainWrapper } from "/src/styles/style";
+import { Sample } from "/src/styles/style";
 import FirstTest from "/src/components/test/FirstTest";
 import SecondTest from "/src/components/test/SecondTest";
-import SideBar from "/src/components/sidebar/SideBar";
 
 export default function TestPage() {
   return (
-    <MainWrapper>
-      <SideBar />
+    <div>
       <h1>테스트용 페이지입니다.</h1>
       1. 파일 경로는 <b>절대경로</b>입니다. {"/src"}로 시작해주세요. 
       <br />
@@ -33,6 +31,6 @@ export default function TestPage() {
       store에 저장된 button(String)과 count(Integer) 값을 전역으로 관리합니다. <br /><br />
       <FirstTest />
       <SecondTest />
-      </MainWrapper>
+      </div>
   );
 }

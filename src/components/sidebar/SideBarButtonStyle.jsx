@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types';
 
-export default function SideBarButtonStyle({ text }) {
+export default function SideBarButtonStyle({ text}) {
+
   return (
     <ButtonWrapper>
-        <ButtonImage />
+        <ButtonImage/>
         {text}
         <EmptyImage />
     </ButtonWrapper>
@@ -37,4 +38,5 @@ export const EmptyImage = styled.div`
 
 SideBarButtonStyle.propTypes = {
     text: PropTypes.string,
+    path: PropTypes.string,
   };
