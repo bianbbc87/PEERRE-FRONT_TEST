@@ -21,23 +21,23 @@ export const Wrapper = styled.div`
 
 
 @media (min-width: 576px) {
-    max-width: 540px;
+    max-width: 576px;
 }
 
 @media (min-width: 768px) {
-    max-width: 720px;
+    max-width: 768px;
 }
 
 @media (min-width: 992px) {
-    max-width: 960px;
+    max-width: 992px;
 }
 
 @media (min-width: 1200px) {
-    max-width: 1140px;
+    max-width: 1200px;
 }
 
 @media (min-width: 1460px) {
-    max-width: 1440px;
+    max-width: 1460px;
 }
 `;
 
