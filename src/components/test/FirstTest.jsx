@@ -1,4 +1,4 @@
-import useStore from "@/stores/test/store.js";
+import useStore from "/src/stores/test/store.js";
 
 function FirstTest() {
     // store 파일의 actions 가져오기
