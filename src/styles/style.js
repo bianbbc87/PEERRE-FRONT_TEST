@@ -8,43 +8,43 @@ export const Sample = styled.div`
 
 /* 전체 */
 // 기본 wrapper
-export const Wrapper = styled.div`
+export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
   min-height: 99vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-
-@media (min-width: 576px) {
-    max-width: 576px;
-}
-
-@media (min-width: 768px) {
-    max-width: 768px;
-}
-
-@media (min-width: 992px) {
-    max-width: 992px;
-}
-
-@media (min-width: 1200px) {
-    max-width: 1200px;
-}
-
-@media (min-width: 1460px) {
-    max-width: 1460px;
-}
 `;
 
-/**  유저 정보 페이지 스타일 **/
-// ...
+export const LeftBody = styled.div`
+top: 0;
+left: 0;
+width: 240px;;
+height: 100%;
+background-color: yellow;
+margin: 0;
+`;
 
-/**  일상 캘린더 스타일 **/
-// ...
+export const RightBody = styled.div`
+flex-grow: 1; /* 남은 공간을 전부 차지한다. */
+height: 100%;
+background-color: gray;
+margin: 0;
+`;
 
-/** 이벤트 페이지 스타일 **/
+export const HeaderWrapper = styled.div`
+width: 100%;
+height: 10vh;
+background-color: blue; 
+margin: 0;
+`;
+
+export const ContentWrapper = styled.div`
+flex-grow: 1;
+width: 100%;
+height: 100%;
+background-color: white;
+z-index: 100;
+margin: 0;
+`;

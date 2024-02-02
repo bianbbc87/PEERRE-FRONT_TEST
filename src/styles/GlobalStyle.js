@@ -4,16 +4,17 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 body {
     margin: 0px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-	align-items: center;
 }
 
 body * {
 /* 추후 font family 지정 */
 }
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    }
 `;
 
 export default GlobalStyle;
