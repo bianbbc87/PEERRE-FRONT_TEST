@@ -16,8 +16,6 @@ export const Wrapper = styled.div`
   min-height: 99vh;
   display: flex;
   flex-direction: column;
-  max-width: 390px;
-  background-color: ${({ theme }) => theme.background.mainBg};
   align-items: center;
   text-align: center;
 `;
