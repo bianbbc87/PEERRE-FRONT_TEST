@@ -29,14 +29,13 @@ margin: 0;
 export const RightBody = styled.div`
 flex-grow: 1; /* 남은 공간을 전부 차지한다. */
 height: 100%;
-background-color: gray;
 margin: 0;
 `;
 
 export const HeaderWrapper = styled.div`
 width: 100%;
 height: 10vh;
-background-color: blue; 
+background-color: orange; 
 margin: 0;
 `;
 

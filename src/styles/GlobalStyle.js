@@ -15,6 +15,12 @@ button {
     outline: none;
     border: none;
     }
+    
+    input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        }
 `;
 
 export default GlobalStyle;
