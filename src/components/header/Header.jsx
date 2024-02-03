@@ -63,6 +63,7 @@ p {
     font-size: 20px;
     font-weight: 700;
     margin: 0;
+    white-space: nowrap;
 }
 `;
 

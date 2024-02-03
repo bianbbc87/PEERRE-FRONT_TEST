@@ -12,6 +12,7 @@ export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   width: 100vw;
+  height: 100vh;
   display: flex;
 `;
 
@@ -52,16 +53,20 @@ z-index: 100;
 margin: 0;
 background: url(${BG});
 background-repeat: no-repeat;
+height: 100%;
 `;
 
 /* team-report */
 
 export const Container = styled.div`
+box-sizing: border-box;
 position: relative;
+width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 20px 80px;
+padding: 30px 80px;
 text-align: left;
 `;
 
@@ -69,16 +74,17 @@ export const Title = styled.p`
 text-align: left;
 display: flex;
 width: 100%;
-
-p {
-  text-align: left;
 font-size: 52px;
 font-weight: 800;
 margin: 0;
+white-space: nowrap;
 }
 `;
 
 export const Team_Box = styled.div`
+/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+box-sizing: border-box;
+margin-top: 20px;
 width: 100%;
 height: 30%;
 display: flex;
@@ -86,7 +92,7 @@ flex-direction: column;
 border-radius: 18px;
 border: 4px solid rgba(26, 208, 121, 0.5);
 text-align: left;
-padding: 20px 30px;
+padding: 20px 40px;
 gap: 20px;
 background-color: #fff;
 
@@ -99,15 +105,41 @@ p {
 
 export const Gaze_Box = styled.div`
 display: flex;
+font-size: 20px;
 `;
 
-export const Gaze = styled.div`
-width: 70%;
-height: 20%;
-`;
+/* team-report > rank */
 
 export const Rank_Box = styled.div`
+box-sizing: border-box;
+margin-top: 20px;
+background-color: #07133B;
 width: 100%;
 height: 70%;
-background-color: green;
-`;
+display: flex;
+border-radius: 18px;
+overflow: hidden;
+`
+
+export const TitleBar = styled.div`
+font-size: 24px;
+font-weight: 800;
+background-color: #fff;
+width: 100%;
+padding: 10px;
+
+P {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+`
+
+export const Line = styled.hr`
+position: absolute;
+height: 100%;
+width: 1px;
+border: 0;
+background-color: #000;
+color: #000;
+`
