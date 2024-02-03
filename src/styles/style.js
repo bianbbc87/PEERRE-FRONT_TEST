@@ -86,7 +86,7 @@ flex-direction: column;
 border-radius: 18px;
 border: 4px solid rgba(26, 208, 121, 0.5);
 text-align: left;
-padding: 20px 30px;
+padding: 20px 40px;
 gap: 20px;
 background-color: #fff;
 
