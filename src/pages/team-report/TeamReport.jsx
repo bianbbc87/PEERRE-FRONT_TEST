@@ -1,5 +1,5 @@
 import { Container, Title, Team_Box, Gaze_Box, Rank_Box } from "/src/styles/style";
-import CustomizedProgressBars from "/src/components/gauge/BorderLinearProgress";
+import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
 
 export default function TeamReport() {
 
