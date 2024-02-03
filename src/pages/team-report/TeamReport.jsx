@@ -1,4 +1,5 @@
 import { Container, Title, Team_Box, Gaze_Box, Gaze, Rank_Box } from "/src/styles/style";
+import GaugeChart from "react-gauge-chart";
 
 export default function TeamReport() {
   return (
@@ -17,7 +18,6 @@ export default function TeamReport() {
         </Gaze_Box>
       </Team_Box>
       <Rank_Box>
-
       </Rank_Box>
     </Container>
   )
