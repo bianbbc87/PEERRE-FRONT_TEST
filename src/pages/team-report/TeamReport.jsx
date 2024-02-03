@@ -18,6 +18,11 @@ export default function TeamReport() {
         </Gaze_Box>
       </Team_Box>
       <Rank_Box>
+      <GaugeChart id="gauge-chart2" 
+        nrOfLevels={30} 
+        percent={0.86} 
+        needleColor="#345243"
+      />
       </Rank_Box>
     </Container>
   )
