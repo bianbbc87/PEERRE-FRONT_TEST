@@ -20,8 +20,10 @@ left: 0;
 width: 240px;;
 height: 100%;
 min-height: 100vh;
-background-color: yellow;
+background-color: #fff;
+box-shadow: 0px 0px 12.9px 1px rgba(0, 0, 0, 0.2);
 margin: 0;
+z-index: 100;
 `;
 
 export const RightBody = styled.div`
@@ -34,8 +36,9 @@ margin: 0;
 export const HeaderWrapper = styled.div`
 width: 100%;
 height: 10vh;
-background-color: orange; 
+background-color: #fff; 
 margin: 0;
+box-shadow: 0px 0px 12.9px 1px rgba(0, 0, 0, 0.2);
 `;
 
 export const ContentWrapper = styled.div`

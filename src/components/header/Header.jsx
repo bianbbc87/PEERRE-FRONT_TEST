@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Profile from "/src/assets/images/header/user_profile.svg";
+import LogoImage from "/src/assets/images/header/peerre_logo.svg";
 
 export default function Header() {
   return (
@@ -13,10 +15,6 @@ export default function Header() {
             </TitleTextBox>
         </LeftBody>
         <RightBody>
-            <SearchBox>
-                <SearchImage />
-                <SearchInput type="text"/>
-            </SearchBox>
             <Logo />
         </RightBody>
     </Body>
@@ -46,7 +44,8 @@ align-items: center;
 export const UserImage = styled.div`
 width: 40px;
 height: 40px;
-background-color: green;
+background: url(${Profile});
+background-repeat: no-repeat;
 `;
 
 export const TitleTextBox = styled.div`
@@ -67,33 +66,11 @@ p {
 }
 `;
 
-export const SearchBox = styled.div`
-height: 90%;
-display: flex;
-border-bottom: 1px solid #000;
-align-items: center;
-padding: 5px;
-justyfi-content: space-between;
-`;
-
-export const SearchImage = styled.div`
-width: 23px;
-height: 23px;
-background-color: green;
-`;
-
-export const SearchInput = styled.input`
-width: auto;
-height: 100%;
-font-size: 15px;
-padding: 5px 10px;
-`;
-
-
 export const Logo = styled.div`
-width: 135px;
+width: 145px;
 height: 47px;
-background-color: green;
+background: url(${LogoImage});
+background-repeat: no-repeat;
 margin-left: 40px;
 `;
 
