@@ -61,7 +61,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 20px 80px;
+padding: 30px 100px;
 text-align: left;
 `;
 
@@ -69,16 +69,15 @@ export const Title = styled.p`
 text-align: left;
 display: flex;
 width: 100%;
-
-p {
-  text-align: left;
 font-size: 52px;
 font-weight: 800;
 margin: 0;
+white-space: nowrap;
 }
 `;
 
 export const Team_Box = styled.div`
+margin-top: 20px;
 width: 100%;
 height: 30%;
 display: flex;
@@ -99,11 +98,12 @@ p {
 
 export const Gaze_Box = styled.div`
 display: flex;
+font-size: 20px;
 `;
 
 export const Gaze = styled.div`
-width: 70%;
-height: 20%;
+width: 100%;
+height: 30%;
 `;
 
 export const Rank_Box = styled.div`
