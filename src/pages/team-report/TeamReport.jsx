@@ -1,4 +1,4 @@
-import { Container, Title, Team_Box, Gaze_Box, Rank_Box } from "/src/styles/style";
+import { Container, Title, Team_Box, Gaze_Box, Rank_Box, Line, TitleBar } from "/src/styles/style";
 import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
 
 export default function TeamReport() {
@@ -19,7 +19,11 @@ export default function TeamReport() {
         </Gaze_Box>
       </Team_Box>
       <Rank_Box>
-      </Rank_Box>
+      <TitleBar>
+          <p>YES 피드백 순위</p>
+        </TitleBar>
+        <Line />
+    </Rank_Box>
     </Container>
   )
 }
