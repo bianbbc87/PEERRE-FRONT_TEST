@@ -2,6 +2,9 @@ import styled from "styled-components";
 import SideBarButtonStyle from "/src/components/sidebar/SideBarButtonStyle";
 import HelperButton from "/src/components/sidebar/HelperButton";
 import { useNavigate } from "react-router-dom";
+import T_L from "/src/assets/images/sidebar/team_logo.svg";
+import T_S from "/src/assets/images/sidebar/team_space.svg";
+import Arrow from "/src/assets/images/sidebar/arrow.svg";
 
 export default function SideBar() {
     const navigate = useNavigate();
@@ -20,41 +23,33 @@ export default function SideBar() {
     <Hr top="15px"/>
     <ButtonListBox>
         <ButtonHoverStyle>
-            <ButtonImage />
-            팀 리포트
-            <ButtonImage />
+            <HoverButtonImage />
+            팀 스페이스
         </ButtonHoverStyle>
         <Hr top="10px"/>
         <div onClick={() => navigate("/회고")}>
-        <SideBarButtonStyle text="회고" path={"/회고"}/>
-        <Hr />
+        <SideBarButtonStyle text="회고" index={0}/>
+        <Hr top="10px"/>
         </div>
         <div onClick={() => navigate("/개인리포트")}>
-        <SideBarButtonStyle text="개인 리포트" path={"/개인리포트"}/>
-        <Hr />
+        <SideBarButtonStyle text="개인 리포트" index={1}/>
+        <Hr top="10px"/>
         </div>
         <div onClick={() => navigate("/피드백관리")}>
-        <SideBarButtonStyle text="피드백 관리" path={"/피드백관리"}/>
-        <Hr />
+        <SideBarButtonStyle text="피드백 관리" index={2}/>
+        <Hr top="10px"/>
         </div>
         <div onClick={() => navigate("/알림")}>
-        <SideBarButtonStyle text="알림" path={"/알림"}/>
-        <Hr />
+        <SideBarButtonStyle text="알림" index={3}/>
+        <Hr top="10px"/>
         </div>
     </ButtonListBox>
-    <Hr top="120px"/>
+    <Hr top="230px"/>
     <HelperListBox>
-        <div onClick={() => navigate("/도움말")}>
-            <HelperButton text="도움말" />
-            </div>
             <div onClick={() => alert("로그아웃 버튼을 클릭하였습니다. ")}>
-            <HelperButton text="로그아웃" />
+            <HelperButton text="로그아웃" index={1}/>
             </div>
         </HelperListBox>
-        <CreateTeamButton onClick={() => alert("팀 스페이스 생성을 클릭하였습니다.")}>
-            <CreateTeamImage/>
-            팀 스페이스 생성
-        </CreateTeamButton>
        </Body>
   )
 }
@@ -77,7 +72,8 @@ export const BarHeader = styled.div`
 export const BarHeaderImage = styled.div`
   width: 50px;
   height: 50px;
-  background-color: green;
+  background: url(${T_L});
+  background-repeat: no-repeat;
 `;
 
 export const BarHeaderText = styled.div`
@@ -97,7 +93,7 @@ p {
   }
 
   font-size: 12px;
-  color: gray;
+  color: #07133B;
 `;
 
 
@@ -108,24 +104,30 @@ export const ButtonListBox= styled.div`
 `;
 
 export const ButtonHoverStyle = styled.button`
-margin-top: 35px;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  color: gray;
-  border-radius: 8px;
-  background-color: rgba(29, 66, 188, 0.1); /* #1D42BC */
-  padding: 10px 15px;
-  justify-content: space-between;
-
-  font-size: 20px;
-  font-weight: 400;
+margin: 50px 10px 0px 10px;
+padding: 15px 0;
+width: 100%;
+display: flex;
+align-items: center;
+color: #07133B;
+font-size: 20px;
+font-weight: 800;
 `;
 
-export const ButtonImage = styled.div`
+export const HoverButtonImage = styled.div`
   width: 35px;
   height: 35px;
-  background-color: green;
+  background: url(${T_S});
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  margin-left: 5px;
+`;
+
+export const HoverButtonArrowImage = styled.div`
+  width: 15px;
+  height: 22px;
+  background: url(${Arrow});
+  background-repeat: no-repeat;
 `;
 
 export const Hr = styled.hr`
@@ -141,29 +143,5 @@ export const HelperListBox= styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 15px;
+  margin-top: 10px;
 `;
-
-export const CreateTeamImage = styled.div`
-  min-width: 40px;
-  min-height: 40px;
-  margin-right: 15px;
-  background-color: green;
-`;
-
-export const CreateTeamButton = styled.button`
-max-width: 100%;
-padding: 20px;
-text-align: left;
-display: flex;
-font-size: 18px;
-font-weight: 400;
-color: black;
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-border-radius: 8px;
-
-margin-top: 50px;
-`;
-
-
-
