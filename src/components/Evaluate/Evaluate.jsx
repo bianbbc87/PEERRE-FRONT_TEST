@@ -10,25 +10,24 @@ const StyledReportContent = styled.div`
   width: 70%;
   border-radius: 20px;
   margin-left: 15%;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
   font-weight: 700;
   ${({ backgroundColor }) =>
     backgroundColor &&
     css`
       background-color: ${backgroundColor};
     `}
+  align-items: center;
 `;
 
 const StyledReportComment = styled.div`
   width: 80%;
   text-align: left;
   margin-left: 10%;
-  margin-top: 3%;
 `;
 
 const StyledCommentRate = styled.div`
   width: 20%;
-  margin-top: 3%;
 `;
 
 // Evaluate 컴포넌트

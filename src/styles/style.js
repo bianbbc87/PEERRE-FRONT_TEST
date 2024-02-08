@@ -614,9 +614,11 @@ export const UpdateBox = styled.div`
   margin-left: 4%;
   border-radius: 7px;
   background: #fff;
-  width: 17%;
   height: 60%;
   margin-top: 1%;
+  padding: 7px;
+
+  white-space: nowrap;
 `;
 export const UpdateImg = styled.img`
   margin: auto 0 auto 3%;
@@ -626,7 +628,7 @@ export const UpdateImg = styled.img`
 export const UpdateTime = styled.div`
   font-size: medium;
   font-weight: 548;
-  margin: auto 2%;
+  margin: auto 20px;
 `;
 
 export const ProfImg = styled.img`
