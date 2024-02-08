@@ -1,13 +1,35 @@
+import { useState } from "react";
 import styled from "styled-components";
 import SideBarButtonStyle from "/src/components/sidebar/SideBarButtonStyle";
 import HelperButton from "/src/components/sidebar/HelperButton";
 import { useNavigate } from "react-router-dom";
 import T_L from "/src/assets/images/sidebar/team_logo.svg";
 import T_S from "/src/assets/images/sidebar/team_space.svg";
-import Arrow from "/src/assets/images/sidebar/arrow.svg";
+import S_T_S from "/src/assets/images/sidebar/selected_team_space.svg";
 
 export default function SideBar() {
     const navigate = useNavigate();
+    const [selected, setSelected] = useState(99);
+
+    const getPath = (index) => {
+      switch (index) {
+        case 0:
+          return "team-report"
+        case 1:
+          return "personal-report"
+        case 2:
+          return "feedback"
+        case 99:
+            return "team-space"
+        default: 
+          return "/" 
+      }
+    }
+
+    const getNavigate = (index) => () => {
+      navigate(getPath(index));
+      setSelected(index);
+    }
 
   return (
     <Body>
@@ -22,21 +44,21 @@ export default function SideBar() {
     </BarHeader>
     <Hr top="15px"/>
     <ButtonListBox>
-        <ButtonHoverStyle>
-            <HoverButtonImage />
+        <ButtonHoverStyle onClick={getNavigate(99)} index={selected}>
+            <HoverButtonImage index={selected}/>
             팀 스페이스
         </ButtonHoverStyle>
         <Hr top="10px"/>
-        <div onClick={() => navigate("/team-report")}>
-        <SideBarButtonStyle text="팀 리포트" index={0}/>
+        <div onClick={getNavigate(0)}>
+        <SideBarButtonStyle text="팀 리포트" index={0} selected={selected}/>
         <Hr top="10px"/>
         </div>
-        <div onClick={() => navigate("/personal-report")}>
-        <SideBarButtonStyle text="개인 리포트" index={1}/>
+        <div onClick={getNavigate(1)}>
+        <SideBarButtonStyle text="개인 리포트" index={1} selected={selected}/>
         <Hr top="10px"/>
         </div>
-        <div onClick={() => navigate("/feedback")}>
-        <SideBarButtonStyle text="피드백 관리" index={2}/>
+        <div onClick={getNavigate(2)}>
+        <SideBarButtonStyle text="피드백 관리" index={2} selected={selected}/>
         <Hr top="10px"/>
         </div>
     </ButtonListBox>
@@ -108,25 +130,18 @@ padding: 15px 0;
 width: 100%;
 display: flex;
 align-items: center;
-color: #07133B;
 font-size: 20px;
 font-weight: 800;
+color: ${(props) => props.index == 99 ? '#07133B' : '#868686'};
 `;
 
 export const HoverButtonImage = styled.div`
   width: 35px;
   height: 35px;
-  background: url(${T_S});
+  background: url(${(props) => props.index == 99 ? S_T_S : T_S});
   background-repeat: no-repeat;
   margin-right: 20px;
   margin-left: 5px;
-`;
-
-export const HoverButtonArrowImage = styled.div`
-  width: 15px;
-  height: 22px;
-  background: url(${Arrow});
-  background-repeat: no-repeat;
 `;
 
 export const Hr = styled.hr`
