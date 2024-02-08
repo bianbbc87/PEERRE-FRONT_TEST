@@ -1,4 +1,4 @@
-import { Container, Title, Team_Box, Gaze_Box, Rank_Box, TitleBar } from "/src/styles/style";
+import { Container, Title, Team_Box, Gaze_Box, Rank_Box, TitleBar, Rank_Box_Color, Line } from "/src/styles/style";
 import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
 import PersonalBar from "../../components/team-report/rank_table/PersonalBar";
 
@@ -22,12 +22,14 @@ export default function TeamReport() {
         </Gaze_Box>
       </Team_Box>
       <Rank_Box>
+        <Rank_Box_Color />
+        <Line />
       <TitleBar>
           <p>YES 피드백 순위</p>
+      </TitleBar>
           {teamMembers.map((member, index) => (
             <PersonalBar key={index} index={index} />
           ))}
-        </TitleBar>
     </Rank_Box>
     </Container>
   )
