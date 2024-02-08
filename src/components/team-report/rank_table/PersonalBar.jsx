@@ -43,7 +43,7 @@ display: flex;
 align-items: center;
 text-align: center;
 margin: 0;
-background-color: ${(props) => props.bg || 'transparent'};
+background-color: ${(props) => props.$bg || 'transparent'};
 
 font-size: 16px;
 font-weight: 350;
