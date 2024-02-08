@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types';
 import T_S from "/src/assets/images/sidebar/team_space.svg";
-import R_R from "/src/assets/images/sidebar/result_report.svg";
 import T_R from "/src/assets/images/sidebar/team_report.svg";
 import P_R from "/src/assets/images/sidebar/person_report.svg";
 import Feed from "/src/assets/images/sidebar/feedback.svg";
@@ -36,8 +35,8 @@ export const ButtonImage = styled.div`
   background: url(${(props) => getUrl(props.index)});
   background-repeat: no-repeat;
   /* 3번째 이미지만 여백이 달라서 발생하는 문제 해결 css */
-  margin-left: ${(props) => props.index == 2 ? "4px" : "0px"};
-  margin-right: ${(props) => props.index == 2 ? "16px" : "20px"};
+  margin-left: ${(props) => props.index == 0 ? "-4px" : "0px"};
+  margin-right: ${(props) => props.index == 0 ? "24px" : "20px"};
 `;
 
 export const SelectedButton = styled.div`
@@ -52,12 +51,10 @@ export const SelectedButton = styled.div`
 const getUrl = (index) => {
   switch (index) {
     case 0:
-      return R_R; 
+      return T_R; 
     case 1:
-      return T_R;
-    case 2:
       return P_R;
-    case 3:
+    case 2:
       return Feed;
     default:
       return T_S;

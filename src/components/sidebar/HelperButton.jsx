@@ -16,9 +16,11 @@ export const ButtonWrapper = styled.button`
   display: flex;
   font-size: 14px;
   color: #868686;
-  margin-top: 7px;
   align-items: center;
   margin-left: 10px;
+
+  position: absolue;
+  bottom: 0;
 `;
 
 export const ButtonImage = styled.div`

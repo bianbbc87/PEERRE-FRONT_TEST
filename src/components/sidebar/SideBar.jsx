@@ -27,29 +27,25 @@ export default function SideBar() {
             팀 스페이스
         </ButtonHoverStyle>
         <Hr top="10px"/>
-        <div onClick={() => navigate("/회고")}>
-        <SideBarButtonStyle text="회고" index={0}/>
+        <div onClick={() => navigate("/team-report")}>
+        <SideBarButtonStyle text="팀 리포트" index={0}/>
         <Hr top="10px"/>
         </div>
-        <div onClick={() => navigate("/개인리포트")}>
+        <div onClick={() => navigate("/personal-report")}>
         <SideBarButtonStyle text="개인 리포트" index={1}/>
         <Hr top="10px"/>
         </div>
-        <div onClick={() => navigate("/피드백관리")}>
+        <div onClick={() => navigate("/feedback")}>
         <SideBarButtonStyle text="피드백 관리" index={2}/>
         <Hr top="10px"/>
         </div>
-        <div onClick={() => navigate("/알림")}>
-        <SideBarButtonStyle text="알림" index={3}/>
-        <Hr top="10px"/>
-        </div>
     </ButtonListBox>
-    <Hr top="230px"/>
-    <HelperListBox>
+    <HelperBox>
+    <Hr bottom="20px"/>
             <div onClick={() => alert("로그아웃 버튼을 클릭하였습니다. ")}>
             <HelperButton text="로그아웃" index={1}/>
             </div>
-        </HelperListBox>
+        </HelperBox>
        </Body>
   )
 }
@@ -61,6 +57,9 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 padding: 20px;
+
+height: 100%;
+box-sizing: border-box;
 `;
 
 export const BarHeader = styled.div`
@@ -136,12 +135,14 @@ export const Hr = styled.hr`
   border: 0;
   background-color: #bdbdbd;
   margin-top: ${(props) => props.top || "0"};
+  margin-bottom: ${(props) => props.bottom || "0"};
 `;
 
-export const HelperListBox= styled.div`
-  width: 100%;
+export const HelperBox= styled.div`
+  width: 85%;
   display: flex;
   flex-direction: column;
 
-  margin-top: 10px;
+  position: absolute;
+  bottom: 40px;
 `;
