@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ThumbImage from "/src/assets/images/team-report/thumb.svg";
 import Thumb_fillImage from "/src/assets/images/team-report/thumb_fill.svg";
 import LankGuage from "../gauge/RankGauge";
+import PropTypes from 'prop-types';
 
 // 배경색 테마 배열 #eeeeee의 투명도 36% 값
 const bgColors = ['#FCEFE9', 'transparent'];
@@ -10,14 +11,14 @@ const bgColors = ['#FCEFE9', 'transparent'];
 export default function PersonalBar({index, value}) {
 
   return (
-    <BarWrapper bg={bgColors[index%bgColors.length]}>
+    <BarWrapper $bg={bgColors[index%bgColors.length]}>
         <CountBox>
             {index + 1}
         </CountBox>
         <Thumb />
         <LankGuage value={value}/>
         <ThumbFill />
-        <Gap left="20px">
+        <Gap $left="20px">
         75개
         </Gap>
         <TagBox>
@@ -71,10 +72,10 @@ margin-left: 10px;
 
 export const Gap = styled.div`
 white-space: nowrap;
-margin-top: ${(props) => props.top || '0'};
-margin-left: ${(props) => props.left || '0'};
-margin-right: ${(props) => props.right || '0'};
-margin-bottom: ${(props) => props.bottom || '0'};
+margin-top: ${(props) => props.$top || '0'};
+margin-left: ${(props) => props.$left || '0'};
+margin-right: ${(props) => props.$right || '0'};
+margin-bottom: ${(props) => props.$bottom || '0'};
 `
 
 export const TagBox = styled.div`
