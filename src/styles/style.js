@@ -91,58 +91,60 @@ export const Title = styled.p`
 `;
 
 export const Team_Box = styled.div`
-  /* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
-  box-sizing: border-box;
-  margin-top: 20px;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 18px;
-  border: 4px solid rgba(26, 208, 121, 0.5);
-  text-align: left;
-  padding: 20px 40px;
-  gap: 20px;
-  background-color: #fff;
+/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+box-sizing: border-box;
+margin-top: 20px;
+width: 100%;
+display: flex;
+flex-direction: column;
+border-radius: 18px;
+border: 4px solid rgba(26, 208, 121, 0.5);
+text-align: left;
+padding: 20px 60px 20px 40px;
+gap: 20px;
+background-color: #fff;
 
-  p {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0;
-  }
+p {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
 `;
 
 export const Gaze_Box = styled.div`
-  display: flex;
-  font-size: 20px;
+display: flex;
+font-size: 20px;
+
+p {
+  margin: 0;
+}
 `;
 
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
-  box-sizing: border-box;
-  margin-top: 20px;
-  background-color: #07133b;
-  width: 100%;
-  height: 70%;
-  display: flex;
-  border-radius: 18px;
-  overflow: hidden;
-`;
+box-sizing: border-box;
+margin-top: 20px;
+background-color: #fff;
+width: 100%;
+height: 70%;
+display: flex;
+border-radius: 18px;
+overflow: hidden;
+`
 
 export const TitleBar = styled.div`
-  font-size: 24px;
-  font-weight: 800;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px;
+background-color: #fff;
+width: 100%;
+height: 50px;
 
-  P {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0;
-  }
-`;
+P {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px 55px;
+  margin: 0;
+}
+`
 
 export const Line = styled.hr`
   position: absolute;
@@ -500,4 +502,137 @@ export const SendButton = styled.div`
   background-position: center;
   display: flex;
   margin: 0.8vw 0 0 0;
+=======
+/* personal page(개인 리포트 ) */
+export const MainContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+`;
+
+export const HeaderBox = styled.div`
+  // border: 1px solid black;
+  color: black;
+  margin-left: 4%;
+  margin-top: 3%;
+  font-size: xx-large;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const SelfBox = styled.div`
+  color: black;
+  margin-left: 4%;
+  margin-top: 2%;
+  font-size: xx-large;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 10px;
+  height: 20%;
+  margin-right: 4%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ReportBox = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+
+export const FeedBackType = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+`;
+
+export const ReportName = styled.div`
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: x-large;
+  font-weight: 700;
+  color: ${({ color }) => color};
+`;
+
+export const Evaluate = styled.div`
+  margin-bottom: 10%;
+`;
+
+export const ContentLine = styled.div`
+  // height: 50%;
+  width: 1%;
+  border-right: 1.5px solid #07133b80;
+  margin-top: 5%;
+
+  margin-bottom: 3%;
+`;
+
+export const Highlight1 = styled.span`
+  color: #1ad079;
+`;
+
+export const Highlight2 = styled.span`
+  color: #ff7d33;
+`;
+
+export const UpdateBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+  border-radius: 7px;
+  background: #fff;
+  width: 17%;
+  height: 60%;
+  margin-top: 1%;
+`;
+export const UpdateImg = styled.img`
+  margin: auto 0 auto 3%;
+  height: 60%;
+`;
+
+export const UpdateTime = styled.div`
+  font-size: medium;
+  font-weight: 548;
+  margin: auto 2%;
+`;
+
+export const ProfImg = styled.img`
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 50%;
+  height: 82%;
+  margin: auto 4%;
+`;
+
+export const ProfName = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+`;
+
+export const MyName = styled.div`
+  font-size: x-large;
+  font-weight: 900;
+`;
+export const MyRole = styled.div`
+  font-size: medium;
+  margin-top: 6%;
+  font-weight: 550;
+`;
+export const IntroSelf = styled.div`
+  margin: auto 0 auto 4%;
+  font-size: large;
+  font-weight: 900;
 `;
