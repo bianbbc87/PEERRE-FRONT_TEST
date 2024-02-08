@@ -18,7 +18,7 @@ export default function PersonalBar({index, value}) {
         <LankGuage value={value}/>
         <ThumbFill />
         <Gap $left="20px">
-        75개
+        {value}개
         </Gap>
         <TagBox>
        <Tag>
