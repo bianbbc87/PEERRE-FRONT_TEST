@@ -82,58 +82,60 @@ white-space: nowrap;
 `;
 
 export const Team_Box = styled.div`
-  /* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
-  box-sizing: border-box;
-  margin-top: 20px;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 18px;
-  border: 4px solid rgba(26, 208, 121, 0.5);
-  text-align: left;
-  padding: 20px 40px;
-  gap: 20px;
-  background-color: #fff;
+/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+box-sizing: border-box;
+margin-top: 20px;
+width: 100%;
+display: flex;
+flex-direction: column;
+border-radius: 18px;
+border: 4px solid rgba(26, 208, 121, 0.5);
+text-align: left;
+padding: 20px 60px 20px 40px;
+gap: 20px;
+background-color: #fff;
 
-  p {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0;
-  }
+p {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
 `;
 
 export const Gaze_Box = styled.div`
-  display: flex;
-  font-size: 20px;
+display: flex;
+font-size: 20px;
+
+p {
+  margin: 0;
+}
 `;
 
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
-  box-sizing: border-box;
-  margin-top: 20px;
-  background-color: #07133b;
-  width: 100%;
-  height: 70%;
-  display: flex;
-  border-radius: 18px;
-  overflow: hidden;
-`;
+box-sizing: border-box;
+margin-top: 20px;
+background-color: #fff;
+width: 100%;
+height: 70%;
+display: flex;
+border-radius: 18px;
+overflow: hidden;
+`
 
 export const TitleBar = styled.div`
-  font-size: 24px;
-  font-weight: 800;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px;
+background-color: #fff;
+width: 100%;
+height: 50px;
 
-  P {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0;
-  }
-`;
+P {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px 55px;
+  margin: 0;
+}
+`
 
 export const Line = styled.hr`
   position: absolute;
