@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
@@ -16,7 +17,7 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
   },
 }));
 
-export default function LankGuage() {
+export default function LankGuage({value}) {
   return (
     // materuial와 styled 중복 import가 안되어서 style={{}} 사용함.
     <div style={{ 
@@ -26,10 +27,14 @@ export default function LankGuage() {
       gap: '20px', 
       }}>
     <Box sx={{ flexGrow: 1 }}>
-      <BorderLinearProgress variant="determinate" value={50} />
+      <BorderLinearProgress variant="determinate" value={value} />
     </Box>
           </div>
   );
 }
 
 // Typography fontsize가 안 변한당~~
+
+LankGuage.propTypes = {
+    value: PropTypes.number,
+  };

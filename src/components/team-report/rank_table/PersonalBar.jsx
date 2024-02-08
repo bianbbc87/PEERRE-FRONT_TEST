@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 import ThumbImage from "/src/assets/images/team-report/thumb.svg";
 import Thumb_fillImage from "/src/assets/images/team-report/thumb_fill.svg";
 import LankGuage from "../gauge/RankGauge";
@@ -6,7 +7,7 @@ import LankGuage from "../gauge/RankGauge";
 // 배경색 테마 배열 #eeeeee의 투명도 36% 값
 const bgColors = ['#FCEFE9', 'transparent'];
 
-export default function PersonalBar({index}) {
+export default function PersonalBar({index, value}) {
 
   return (
     <BarWrapper bg={bgColors[index%bgColors.length]}>
@@ -14,7 +15,7 @@ export default function PersonalBar({index}) {
             {index + 1}
         </CountBox>
         <Thumb />
-        <LankGuage />
+        <LankGuage value={value}/>
         <ThumbFill />
         <Gap left="20px">
         75개
@@ -93,3 +94,8 @@ export const CountBox = styled.div`
 min-width: 50px;
 max-width: 50px;
 `
+
+PersonalBar.propTypes = {
+    index: PropTypes.number,
+    value: PropTypes.number,
+  };
