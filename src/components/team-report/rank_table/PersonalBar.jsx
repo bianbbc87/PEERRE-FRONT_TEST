@@ -53,6 +53,8 @@ text-align: center;
 margin: 0;
 background-color: ${(props) => props.$bg || 'transparent'};
 
+cursor: pointer;
+
 font-size: 16px;
 font-weight: 350;
 color: #07133B;
