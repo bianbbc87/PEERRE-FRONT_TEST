@@ -4,6 +4,7 @@ import { ContentWrapper, HeaderWrapper, LeftBody, MainWrapper, RightBody } from 
 import SideBar from "/src/components/sidebar/SideBar";
 import Header from "/src/components/header/header";
 import TeamReport from "/src/pages/team-report/TeamReport";
+import ResultReport from "/src/pages/result-report/ResultReport";
 
 // route 설정 해주세요.
 // 경로 "/"는 추후 각자 설정해주세요.
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/test" element={<TestPage />} />
         <Route path="/team-report" element={<TeamReport />} />
+        <Route path="/result-report" element={<ResultReport />} />
       </Routes>
       </ContentWrapper>
     </RightBody>
