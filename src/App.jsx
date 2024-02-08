@@ -30,6 +30,7 @@ function App() {
             <Route path="/test" element={<TestPage />} />
             <Route path="/team-report" element={<TeamReport />} />
             <Route path="/personal-report" element={<PersonalReport />} />
+            <Route path="/result-report" element={<ResultReport />} />
           </Routes>
         </ContentWrapper>
       </RightBody>
