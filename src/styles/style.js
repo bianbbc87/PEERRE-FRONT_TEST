@@ -502,8 +502,8 @@ export const SendButton = styled.div`
   background-position: center;
   display: flex;
   margin: 0.8vw 0 0 0;
-=======
-/* personal page(개인 리포트 ) */
+  `
+
 export const MainContainer = styled.div`
   height: 100%;
   display: flex;
