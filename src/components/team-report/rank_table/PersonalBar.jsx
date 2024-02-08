@@ -7,10 +7,18 @@ import LankGuage from "../gauge/RankGauge";
 // 배경색 테마 배열 #eeeeee의 투명도 36% 값
 const bgColors = ['#FCEFE9', 'transparent'];
 
-export default function PersonalBar({index, value}) {
+export default function PersonalBar({index, value, selected, onClick}) {
+
+    const getBGColor = (index, selected) => {
+        if(index == selected) {
+            return 'rgba(26, 208, 121, 0.43)';
+        } else {
+            return bgColors[index%bgColors.length];
+        }
+    }
 
   return (
-    <BarWrapper $bg={bgColors[index%bgColors.length]}>
+    <BarWrapper $bg={getBGColor(index, selected)} onClick={onClick}>
         <CountBox>
             {index + 1}
         </CountBox>
@@ -104,4 +112,6 @@ pointer-events: none;
 PersonalBar.propTypes = {
     index: PropTypes.number,
     value: PropTypes.number,
+    selected: PropTypes.number,
+    onClick: PropTypes.func,
   };
