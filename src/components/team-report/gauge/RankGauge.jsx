@@ -1,7 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import Typography from '@mui/material/Typography';
 
 // 게이지 샘플
 const BorderLinearProgress = styled(LinearProgress)(() => ({
@@ -17,7 +16,7 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
   },
 }));
 
-export default function CustomizedProgressBars() {
+export default function LankGuage() {
   return (
     // materuial와 styled 중복 import가 안되어서 style={{}} 사용함.
     <div style={{ 
@@ -29,9 +28,6 @@ export default function CustomizedProgressBars() {
     <Box sx={{ flexGrow: 1 }}>
       <BorderLinearProgress variant="determinate" value={50} />
     </Box>
-          <Typography variant="body2" color="#000000" sx={{ fontSize: '20px' }}>{`${Math.round(
-            50,
-          )}%`}</Typography>
           </div>
   );
 }

@@ -86,19 +86,18 @@ export const Team_Box = styled.div`
 box-sizing: border-box;
 margin-top: 20px;
 width: 100%;
-height: 30%;
 display: flex;
 flex-direction: column;
 border-radius: 18px;
 border: 4px solid rgba(26, 208, 121, 0.5);
 text-align: left;
-padding: 20px 40px;
+padding: 20px 60px 20px 40px;
 gap: 20px;
 background-color: #fff;
 
 p {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   margin: 0;
 }
 `;
@@ -106,6 +105,10 @@ p {
 export const Gaze_Box = styled.div`
 display: flex;
 font-size: 20px;
+
+p {
+  margin: 0;
+}
 `;
 
 /* team-report > rank */
@@ -113,7 +116,7 @@ font-size: 20px;
 export const Rank_Box = styled.div`
 box-sizing: border-box;
 margin-top: 20px;
-background-color: #07133B;
+background-color: #fff;
 width: 100%;
 height: 70%;
 display: flex;
@@ -122,15 +125,14 @@ overflow: hidden;
 `
 
 export const TitleBar = styled.div`
-font-size: 24px;
-font-weight: 800;
 background-color: #fff;
 width: 100%;
-padding: 10px;
+height: 50px;
 
 P {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
+  padding: 10px 55px;
   margin: 0;
 }
 `
