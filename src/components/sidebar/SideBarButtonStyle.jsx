@@ -12,9 +12,9 @@ import NotSelected from "/src/assets/images/sidebar/prev_arrow.svg";
 export default function SideBarButtonStyle({text, index, selected}) {
 
   return (
-    <ButtonWrapper index={index} selected={selected}>
-      <SelectedButton index={index} selected={selected}/>
-        <ButtonImage index={index} selected={selected}/>
+    <ButtonWrapper $index={index} $selected={selected}>
+      <SelectedButton $index={index} $selected={selected}/>
+        <ButtonImage $index={index} $selected={selected}/>
         {text}
     </ButtonWrapper>
   )
@@ -28,23 +28,23 @@ export const ButtonWrapper = styled.button`
   align-items: center;
   font-size: 20px;
   font-weight: 800;
-  color: ${(props) => props.selected == props.index ? '#07133B' : '#868686'};
+  color: ${(props) => props.$selected == props.$index ? '#07133B' : '#868686'};
 `;
 
 export const ButtonImage = styled.div`
   width: 36px;
   height: 36px;
-  background: url(${(props) => getUrl(props.index, props.selected)});
+  background: url(${(props) => getUrl(props.$index, props.$selected)});
   background-repeat: no-repeat;
   /* 3번째 이미지만 여백이 달라서 발생하는 문제 해결 css */
-  margin-left: ${(props) => props.index == 0 ? "-4px" : "0px"};
-  margin-right: ${(props) => props.index == 0 ? "24px" : "20px"};
+  margin-left: ${(props) => props.$index == 0 ? "-4px" : "0px"};
+  margin-right: ${(props) => props.$index == 0 ? "24px" : "20px"};
 `;
 
 export const SelectedButton = styled.div`
   width: 15px;
   height: 22px;
-  background: url(${(props) => props.selected == props.index ? Selected : NotSelected});
+  background: url(${(props) => props.$selected == props.$index ? Selected : NotSelected});
   background-repeat: no-repeat;
   margin-right: 15px;
 `;

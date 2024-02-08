@@ -42,28 +42,28 @@ export default function SideBar() {
         피어리 마케팅 A팀
     </BarHeaderText>
     </BarHeader>
-    <Hr top="15px"/>
+    <Hr $top="15px"/>
     <ButtonListBox>
-        <ButtonHoverStyle onClick={getNavigate(99)} index={selected}>
-            <HoverButtonImage index={selected}/>
+        <ButtonHoverStyle onClick={getNavigate(99)} $index={selected}>
+            <HoverButtonImage $index={selected}/>
             팀 스페이스
         </ButtonHoverStyle>
-        <Hr top="10px"/>
+        <Hr $top="10px"/>
         <div onClick={getNavigate(0)}>
         <SideBarButtonStyle text="팀 리포트" index={0} selected={selected}/>
-        <Hr top="10px"/>
+        <Hr $top="10px"/>
         </div>
         <div onClick={getNavigate(1)}>
         <SideBarButtonStyle text="개인 리포트" index={1} selected={selected}/>
-        <Hr top="10px"/>
+        <Hr $top="10px"/>
         </div>
         <div onClick={getNavigate(2)}>
         <SideBarButtonStyle text="피드백 관리" index={2} selected={selected}/>
-        <Hr top="10px"/>
+        <Hr $top="10px"/>
         </div>
     </ButtonListBox>
     <HelperBox>
-    <Hr bottom="20px"/>
+    <Hr $bottom="20px"/>
             <div onClick={() => alert("로그아웃 버튼을 클릭하였습니다. ")}>
             <HelperButton text="로그아웃" index={1}/>
             </div>
@@ -132,13 +132,13 @@ display: flex;
 align-items: center;
 font-size: 20px;
 font-weight: 800;
-color: ${(props) => props.index == 99 ? '#07133B' : '#868686'};
+color: ${(props) => props.$index == 99 ? '#07133B' : '#868686'};
 `;
 
 export const HoverButtonImage = styled.div`
   width: 35px;
   height: 35px;
-  background: url(${(props) => props.index == 99 ? S_T_S : T_S});
+  background: url(${(props) => props.$index == 99 ? S_T_S : T_S});
   background-repeat: no-repeat;
   margin-right: 20px;
   margin-left: 5px;
@@ -149,8 +149,8 @@ export const Hr = styled.hr`
   height: 1px;
   border: 0;
   background-color: #bdbdbd;
-  margin-top: ${(props) => props.top || "0"};
-  margin-bottom: ${(props) => props.bottom || "0"};
+  margin-top: ${(props) => props.$top || "0"};
+  margin-bottom: ${(props) => props.$bottom || "0"};
 `;
 
 export const HelperBox= styled.div`
