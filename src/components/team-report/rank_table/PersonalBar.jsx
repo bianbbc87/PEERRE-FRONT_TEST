@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 import ThumbImage from "/src/assets/images/team-report/thumb.svg";
 import Thumb_fillImage from "/src/assets/images/team-report/thumb_fill.svg";
 import LankGuage from "../gauge/RankGauge";
 import PropTypes from 'prop-types';
 
-// 배경색 테마 배열
-const bgColors = ['#FCEFE9', '#FFFFFF'];
+// 배경색 테마 배열 #eeeeee의 투명도 36% 값
+const bgColors = ['#FCEFE9', 'transparent'];
 
-export default function PersonalBar({index}) {
+export default function PersonalBar({index, value}) {
 
   return (
     <BarWrapper $bg={bgColors[index%bgColors.length]}>
@@ -15,7 +16,7 @@ export default function PersonalBar({index}) {
             {index + 1}
         </CountBox>
         <Thumb />
-        <LankGuage />
+        <LankGuage value={value}/>
         <ThumbFill />
         <Gap $left="20px">
         75개
@@ -37,16 +38,16 @@ export default function PersonalBar({index}) {
 
 export const BarWrapper = styled.div`
 width: 100%;
-padding: 10px 0;
+padding: 12px 0;
 min-width: 80%;
 display: flex;
 align-items: center;
 text-align: center;
 margin: 0;
-background-color: ${(props) => props.$bg || '#fff'};
+background-color: ${(props) => props.bg || 'transparent'};
 
 font-size: 16px;
-font-weight: 400;
+font-weight: 350;
 color: #07133B;
 `
 
@@ -56,7 +57,7 @@ min-width: 31px;
 min-height: 28px;
 background-repeat: no-repeat;
 
-margin-left: 20px;
+margin-left: 30px;
 margin-right: 10px;
 `
 
@@ -97,4 +98,5 @@ max-width: 50px;
 
 PersonalBar.propTypes = {
     index: PropTypes.number,
+    value: PropTypes.number,
   };

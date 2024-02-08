@@ -101,7 +101,7 @@ border-radius: 18px;
 border: 4px solid rgba(26, 208, 121, 0.5);
 text-align: left;
 padding: 20px 60px 20px 40px;
-gap: 20px;
+gap: 26px;
 background-color: #fff;
 
 p {
@@ -123,26 +123,45 @@ p {
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
+position: relative;
+
 box-sizing: border-box;
 margin-top: 20px;
-background-color: #fff;
+background-color: rgba(238, 238, 238, 0.36);
 width: 100%;
 height: 70%;
-display: flex;
 border-radius: 18px;
 overflow: hidden;
+
+display: flex;
+flex-direction: column;
+`
+
+/* rank_box bg가 투명도가 있어 배경색에 묻히는 문제 해결용 컴포넌트 */
+export const Rank_Box_Color = styled.div`
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #fff;
+z-index: -1;
 `
 
 export const TitleBar = styled.div`
+display: flex;
 background-color: #fff;
 width: 100%;
 height: 50px;
+border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
+align-items: center;
+text-align: left;
 
 P {
   font-size: 24px;
   font-weight: 700;
-  padding: 10px 55px;
   margin: 0;
+  margin-left: 70px;
 }
 `
 
@@ -150,9 +169,11 @@ export const Line = styled.hr`
   position: absolute;
   height: 100%;
   width: 1px;
+  top: -10px;
+  left: 50px;
   border: 0;
-  background-color: #000;
-  color: #000;
+  background-color: rgba(7, 19, 59, 0.6);
+  color: rgba(7, 19, 59, 0.6);
 `;
 
 /* result-report */

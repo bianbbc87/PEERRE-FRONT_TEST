@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
@@ -17,7 +18,7 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
   },
 }));
 
-export default function CustomizedProgressBars() {
+export default function CustomizedProgressBars({value}) {
   return (
     // materuial와 styled 중복 import가 안되어서 style={{}} 사용함.
     <div style={{ 
@@ -25,15 +26,20 @@ export default function CustomizedProgressBars() {
       width: '100%', 
       alignItems: 'center', 
       gap: '20px', 
+      fontSize: '20px'
       }}>
     <Box sx={{ flexGrow: 1 }}>
-      <BorderLinearProgress variant="determinate" value={50} />
+      <BorderLinearProgress variant="determinate" value={value} />
     </Box>
-          <Typography variant="body2" color="#000000" sx={{ fontSize: '20px' }}>{`${Math.round(
-            50,
+          <Typography variant="body2" color="#000000">{`${Math.round(
+            value,
           )}%`}</Typography>
           </div>
   );
 }
 
 // Typography fontsize가 안 변한당~~
+
+CustomizedProgressBars.propTypes = {
+  value: PropTypes.number,
+};
