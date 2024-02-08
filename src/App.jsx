@@ -10,6 +10,7 @@ import {
 import SideBar from "/src/components/sidebar/SideBar";
 import Header from "/src/components/header/header";
 import TeamReport from "/src/pages/team-report/TeamReport";
+import ResultReport from "/src/pages/result-report/ResultReport";
 import PersonalReport from "./pages/personal-report/PersonalReport";
 
 // route 설정 해주세요.
