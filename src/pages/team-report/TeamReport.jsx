@@ -1,6 +1,7 @@
 import { Container, Title, Team_Box, Gaze_Box, Rank_Box, TitleBar, Rank_Box_Color, Line } from "/src/styles/style";
 import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
 import PersonalBar from "../../components/team-report/rank_table/PersonalBar";
+import { useState } from "react";
 
 export default function TeamReport() {
   // 더미 데이터
@@ -13,6 +14,12 @@ export default function TeamReport() {
     {"name": "신서희", "value": 63},
     {"name": "유서희", "value": 55}
   ]
+
+  const [selected, setSelected] = useState(99);
+
+  const selectBar = (index) => () => {
+    setSelected(index);
+  }
 
   return (
     <Container>
@@ -36,7 +43,7 @@ export default function TeamReport() {
           <p>YES 피드백 순위</p>
       </TitleBar>
           {teamMembers.map((member, index) => (
-            <PersonalBar key={index} index={index} value={member.value}/>
+            <PersonalBar key={index} index={index} value={member.value} selected={selected} onClick={selectBar(index)}/>
           ))}
     </Rank_Box>
     </Container>

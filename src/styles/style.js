@@ -88,6 +88,8 @@ export const Title = styled.p`
   font-weight: 800;
   margin: 0;
   white-space: nowrap;
+
+  pointer-events: none;
 `;
 
 export const Team_Box = styled.div`
@@ -108,6 +110,8 @@ p {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
+
+  pointer-events: none;
 }
 `;
 
@@ -117,6 +121,8 @@ font-size: 20px;
 
 p {
   margin: 0;
+
+  pointer-events: none;
 }
 `;
 
@@ -162,6 +168,8 @@ P {
   font-weight: 700;
   margin: 0;
   margin-left: 70px;
+
+  pointer-events: none;
 }
 `
 
