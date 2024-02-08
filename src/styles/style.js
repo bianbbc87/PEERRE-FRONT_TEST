@@ -49,7 +49,7 @@ export const RightBody = styled.div`
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  height: 10vh;
+  min-height: 10%;
   background-color: #fff;
   margin: 0;
   box-shadow: 0px 0px 12.9px 1px rgba(0, 0, 0, 0.2);
