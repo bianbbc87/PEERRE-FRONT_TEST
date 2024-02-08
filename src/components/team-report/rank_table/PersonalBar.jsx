@@ -75,6 +75,8 @@ margin-top: ${(props) => props.$top || '0'};
 margin-left: ${(props) => props.$left || '0'};
 margin-right: ${(props) => props.$right || '0'};
 margin-bottom: ${(props) => props.$bottom || '0'};
+
+pointer-events: none;
 `
 
 export const TagBox = styled.div`
@@ -88,11 +90,15 @@ text-align: left;
 export const Tag = styled.div`
 margin-left: 15px;
 white-space: nowrap;
+
+pointer-events: none;
 `
 
 export const CountBox = styled.div`
 min-width: 50px;
 max-width: 50px;
+
+pointer-events: none;
 `
 
 PersonalBar.propTypes = {
