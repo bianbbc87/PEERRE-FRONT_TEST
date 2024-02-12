@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import BG from "/src/assets/images/background/background.svg";
+import BG_3 from "/src/assets/images/background/background_3.svg";
 import detailBackground from "/src/assets/images/result-report/reportBox.png";
 import detailBackground2 from "/src/assets/images/result-report/reportBox2.png";
 import comment1 from "/src/assets/images/result-report/말풍선1.png";
@@ -17,6 +18,15 @@ export const Sample = styled.div`
 `;
 
 /* 전체(수정 X) */
+export const FirstMainWrapper = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+`;
+
 export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
@@ -60,7 +70,7 @@ export const ContentWrapper = styled.div`
   flex-grow: 1;
   z-index: 100;
   margin: 0;
-  background: url(${BG});
+  background: url(${(props) => props.isBg ? BG : BG_3});
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
