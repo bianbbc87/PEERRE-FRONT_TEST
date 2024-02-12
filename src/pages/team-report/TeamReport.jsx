@@ -1,7 +1,8 @@
 import { Container, Title, Team_Box, Gaze_Box, Rank_Box, TitleBar, Rank_Box_Color, Line } from "/src/styles/style";
 import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
 import PersonalBar from "../../components/team-report/rank_table/PersonalBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
 export default function TeamReport() {
   // 더미 데이터
@@ -14,6 +15,26 @@ export default function TeamReport() {
     {"name": "신서희", "value": 63},
     {"name": "유서희", "value": 55}
   ]
+
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        // 여기서 'your-api-url'을 실제 API URL로 대체합니다.
+        const response = await axios.get('http://13.124.90.245:8080/api/projects/1/team-report', {
+          headers: {
+            'Authorization': 'Bearer token',
+            'Content-Type': 'application/json'
+          }
+        });
+        setData(response.data); 
+        console.log(response.data);
+      } catch(error) {
+        console.log(error);
+      }
+    }
+  }, []);
 
   const [selected, setSelected] = useState(99);
 
