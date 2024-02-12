@@ -12,6 +12,7 @@ import Header from "/src/components/header/header";
 import TeamReport from "/src/pages/team-report/TeamReport";
 import ResultReport from "/src/pages/result-report/ResultReport";
 import PersonalReport from "./pages/personal-report/PersonalReport";
+import CreateTeam from "./pages/create-team/CreateTeam";
 
 // route 설정 해주세요.
 // 경로 "/"는 추후 각자 설정해주세요.
@@ -31,6 +32,7 @@ function App() {
             <Route path="/team-report" element={<TeamReport />} />
             <Route path="/personal-report" element={<PersonalReport />} />
             <Route path="/result-report" element={<ResultReport />} />
+            <Route path="/create-team" element={<CreateTeam />} />
           </Routes>
         </ContentWrapper>
       </RightBody>
