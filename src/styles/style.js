@@ -691,7 +691,6 @@ export const CreateLogo = styled.img`
 export const LogoContainer = styled.div`
   width: 30%;
 `;
-//추가
 
 export const CreateTitle = styled.div`
   font-weight: 700;
@@ -745,6 +744,7 @@ export const CreateLeader = styled.div`
   padding-bottom: 40px;
   padding-top: 30px;
   // padding-right: 360px;
+  padding-left: 30px;
 `;
 export const LeaderLabel = styled.div`
   font-weight: 700;
@@ -783,3 +783,39 @@ export const CreateOkay = styled.div`
   font-size: large;
   font-weight: 700;
 `;
+
+export const CreateTeamProject = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  // padding-right: 360px;
+  padding-left: 60px;
+`;
+export const ProjectLabel = styled.div`
+  font-weight: 700;
+  font-size: large;
+  padding-right: 40px;
+`;
+
+export const ProjectBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  padding-left: 20px;
+`;
+export const CreateProjectProfile = styled.img``;
+
+export const CreateProjectName = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 700;
+`;
+
+//

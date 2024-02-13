@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   TeamContainer,
   CreateDetail,
@@ -20,6 +22,11 @@ import {
 } from "/src/styles/style";
 
 function CreateTeam() {
+  const navigate = useNavigate();
+
+  const handleNextBoxClick = () => {
+    navigate(`/create-project`);
+  };
   return (
     <TeamContainer>
       <CreateDetail>
@@ -31,7 +38,7 @@ function CreateTeam() {
         </CreateName>
         {/*  */}
         <CreateIntro>
-          <IntroLabel>팀 이름</IntroLabel>
+          <IntroLabel>팀 소개</IntroLabel>
           <IntroBox></IntroBox>
         </CreateIntro>
         {/*  */}
@@ -43,7 +50,7 @@ function CreateTeam() {
           </LeaderBox>
         </CreateLeader>
         {/*  */}
-        <CreateOkay>완료</CreateOkay>
+        <CreateOkay onClick={handleNextBoxClick}>완료</CreateOkay>
       </CreateDetail>
       <LogoContainer>
         <CreateLogo src="src/assets/images/team-create/team-create-logo.png" />
