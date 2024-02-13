@@ -667,3 +667,309 @@ export const IntroSelf = styled.div`
   font-size: large;
   font-weight: 900;
 `;
+
+/*FeedbackUsers*/
+
+export const MainFeedback = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+`;
+export const FeedbackUsersTextBox = styled.div`
+pointer-events: none;
+color: black;
+margin-left: 4%;
+margin-top: 1%;
+font-size: xx-large;
+font-weight: 700;
+display: flex;
+flex-direction: row;
+`
+
+export const NameBox = styled.div`
+pointer-events: none;
+  color: black;
+  margin-left: 4%;
+  margin-top: 1%;
+  background-color: white;
+  border-radius: 10px;
+  height: 15%;
+  width: 300px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  font-size: xx-large;
+  align-items: center;
+  padding-left: 1%;
+  white-space: nowrap;
+`;
+
+export const Name = styled.div`
+pointer-events: none;
+  font-size: x-large;
+  font-weight: 900;
+`;
+export const Role = styled.div`
+pointer-events: none;
+  font-size: medium;
+  margin-top: 6%;
+  font-weight: 550;
+`
+export const UserTeamProfImg = styled.img`
+pointer-events: none;
+background: lightgray 50% / cover no-repeat;
+border-radius: 50%;
+height: 82%;
+margin-left: 3%;
+margin-right: 1%;
+`
+
+export const Assess1 = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+margin-left: 11%;
+margin-bottom: 2%;
+font-weight: 700;
+height: 12%;
+width: 70%;
+border-radius: 20px;
+background-color: #F4F4F4;
+&:active {
+  background-color: #1AD079B2;
+}
+`
+export const Assess2 = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+margin-left: 11%;
+margin-bottom: 2%;
+font-weight: 700;
+height: 12%;
+width: 70%;
+border-radius: 20px;
+background-color: #F4F4F4;
+&:active {
+  background-color: #FFA471;
+}
+`
+
+export const FeedbackLine = styled.div`
+pointer-events: none;
+  width: 1%;
+  height: 69%;
+  border-right: 1.5px solid #07133b80;
+  margin-top: 5%;
+
+`;
+export const Button = styled.div`
+cursor: pointer;
+background-color: #E6E6E6B8;
+border-radius: 16px;
+box-shadow: 0px 4px 6.099999904632568px -1px #00000033;
+font-weight: 700;
+display: flex;
+justify-content : center;
+align-items: center;
+width: 13%;
+height: 11.5%;
+margin-left: 95%;
+margin-bottom: 2%;
+&:active {
+  background-color: #868686;
+}
+
+`
+export const Block = styled.div`
+width: 13%;
+height: 11.5%;
+`
+
+export const FeedbackBox = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+
+export const UsersFeedBackType = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+`;
+
+
+export const TeamName = styled.div`
+pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+`;
+
+export const FeedbackAnswer = styled.div`
+pointer-events: none;
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+  font-size: x-large;
+  font-weight: 700;
+  color: ${({ color }) => color};
+`;
+/*Feedback*/
+
+export const MainCheck = styled.div`
+pointer-events: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  margin: 0;
+`;
+export const MyFeedbackBox = styled.div`
+  height: 100%;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom:2%;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: end;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+export const FeedbackTextBox = styled.div`
+color: black;
+margin-left: 4%;
+margin-top: 3%;
+margin-bottom: 3%;
+font-size: xx-large;
+font-weight: 700;
+display: flex;
+`
+// export const FeedbackDesign = styled.img`
+// position: absolute;
+
+//`
+export const YesNoBox = styled.div`
+display: flex;
+height: 10%;
+padding-top: 2%;
+flex-direction: row;
+justify-content: end;
+white-space: nowrap;
+`
+export const Yes = styled.span`
+  color: #1ad079;
+`;
+
+export const No = styled.span`
+  color: #ff7d33;
+
+`;
+export const TextFeedback1 = styled.span`
+font-weight: 700;
+font-size: x-large;
+margin-right: 15%;
+`
+export const TextFeedback2 = styled.span`
+font-weight: 700;
+font-size: x-large;
+padding-right: 13%;
+
+`
+export const Person = styled.div`
+display: flex;
+align-items: center;
+white-space: nowrap;
+margin: 0;
+`
+export const TeamProfImg = styled.img`
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 50%;
+  height: 82%;
+  margin-left: 3%;
+  margin-right: 1%;
+`;
+export const Who = styled.div`
+margin-right: 1%;
+margin-left: 1%;
+`
+export const FeedbackLLine = styled.div`
+width:0.08%;
+height: 300px;
+margin-left: 5%;
+margin-top: 3%;
+background-color: #07133B80;
+opacity : 0.5;
+`
+export const Team = styled.div`
+`
+export const MemberName = styled.div`
+font-weight: 700;
+font-size: x-large;
+margin-bottom: 8%;
+`
+export const How = styled.div`
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: #E4E4E454;
+width: 550px;
+height: 120px;
+border-radius: 21px;
+margin-left:15%;
+font-weight: 700;
+`
+export const FeedbackList1 = styled.span`
+posiroom' lwfrSWWWW
+padding-right: 5%;
+`
+export const FeedbackList2 = styled.span`
+`
+
+/*Home*/
+export const HomeContainer = styled.div`
+pointer-events: none;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url('/src/assets/images/background/Rectangle 44.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  `
+export const HomeBox = styled.div`
+display: flex;
+width: 100%;
+margin: 2%;
+background-color: white;
+border-radius: 10px;
+align-items: center;
+justify-content: center;
+`
+export const  LogoImg = styled.img`
+display: block;
+width: 400px;
+height: auto; /* 가로 세로 비율 유지 */
+
+`
+export const MotoImg = styled.img`
+display: block;
+width: 400px;
+height: auto;
+`
+export const HomeLogo = styled.div`
+margin-bottom: 15%;
+`
