@@ -725,13 +725,14 @@ export const NameLabel = styled.div`
   white-space: nowrap;
 `;
 
-export const NameBox = styled.div`
+export const NameInput = styled.input`
   //  textfield
   width: 74%;
   // height: 40px;
   padding-bottom: 6%;
   border-radius: 16px;
   background: rgba(217, 217, 217, 0.36);
+  text-align: center;
 `;
 
 export const CreateIntro = styled.div`
@@ -747,13 +748,14 @@ export const IntroLabel = styled.div`
   white-space: nowrap;
 `;
 
-export const IntroBox = styled.div`
+export const IntroInput = styled.input`
   //  textfield
   width: 74%;
   // height: 120px;
   border-radius: 16px;
   padding-bottom: 20%;
   background: rgba(217, 217, 217, 0.36);
+  text-align: center;
 `;
 
 export const CreateLeader = styled.div`

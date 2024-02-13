@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import {
   TeamContainer,
   CreateDetail,
@@ -7,7 +8,7 @@ import {
   CreateTitle,
   CreateName,
   NameLabel,
-  NameBox,
+  NameInput,
   CreateTeamProject,
   ProjectLabel,
   ProjectBox,
@@ -17,6 +18,8 @@ import {
 } from "/src/styles/style";
 
 function CreateProject() {
+  const location = useLocation();
+  const teamspaceId = location.state?.teamspaceId;
   return (
     <TeamContainer>
       <CreateDetail>
@@ -24,7 +27,11 @@ function CreateProject() {
         {/*  */}
         <CreateName>
           <NameLabel>프로젝트 이름</NameLabel>
-          <NameBox></NameBox>
+          <NameInput
+            type="text"
+            value={teamName}
+            onChange={(e) => setTeamName(e.target.value)}
+          />
         </CreateName>
         {/*  */}
         <CreateTeamProject>
