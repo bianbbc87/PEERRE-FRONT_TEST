@@ -12,6 +12,8 @@ import Header from "/src/components/header/header";
 import TeamReport from "/src/pages/team-report/TeamReport";
 import ResultReport from "/src/pages/result-report/ResultReport";
 import PersonalReport from "./pages/personal-report/PersonalReport";
+import CreateTeam from "./pages/create-team/CreateTeam";
+import CreateProject from "./pages/create-team/CreateProject";
 
 import Feedback from "./pages/feedback/Feedback";
 import FeedbackUsers from "./pages/feedback/FeedbackUsers";
@@ -66,6 +68,8 @@ function App() {
             <Route path="/team-report" element={<TeamReport />} />
             <Route path="/personal-report" element={<PersonalReport />} />
             <Route path="/result-report" element={<ResultReport />} />
+            <Route path="/create-team" element={<CreateTeam />} />
+            <Route path="/create-project" element={<CreateProject />} />
             <Route path="/feedback" element = {<Feedback />} />
             <Route path="/feedback/users" element = {<FeedbackUsers />} />
           </Routes>

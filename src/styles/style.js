@@ -103,85 +103,85 @@ export const Title = styled.p`
 `;
 
 export const Team_Box = styled.div`
-/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
-box-sizing: border-box;
-margin-top: 20px;
-width: 100%;
-display: flex;
-flex-direction: column;
-border-radius: 18px;
-border: 4px solid rgba(26, 208, 121, 0.5);
-text-align: left;
-padding: 20px 60px 20px 40px;
-gap: 26px;
-background-color: #fff;
+  /* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 4px solid rgba(26, 208, 121, 0.5);
+  text-align: left;
+  padding: 20px 60px 20px 40px;
+  gap: 26px;
+  background-color: #fff;
 
-p {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 export const Gaze_Box = styled.div`
-display: flex;
-font-size: 20px;
+  display: flex;
+  font-size: 20px;
 
-p {
-  margin: 0;
+  p {
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
-position: relative;
+  position: relative;
 
-box-sizing: border-box;
-margin-top: 20px;
-background-color: rgba(238, 238, 238, 0.36);
-width: 100%;
-height: 70%;
-border-radius: 18px;
-overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: rgba(238, 238, 238, 0.36);
+  width: 100%;
+  height: 70%;
+  border-radius: 18px;
+  overflow: hidden;
 
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
 /* rank_box bg가 투명도가 있어 배경색에 묻히는 문제 해결용 컴포넌트 */
 export const Rank_Box_Color = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-z-index: -1;
-`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+`;
 
 export const TitleBar = styled.div`
-display: flex;
-background-color: #fff;
-width: 100%;
-height: 50px;
-border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
-align-items: center;
-text-align: left;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
+  align-items: center;
+  text-align: left;
 
-P {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-  margin-left: 70px;
+  P {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 70px;
 
-  pointer-events: none;
-}
-`
+    pointer-events: none;
+  }
+`;
 
 export const Line = styled.hr`
   position: absolute;
@@ -541,7 +541,7 @@ export const SendButton = styled.div`
   background-position: center;
   display: flex;
   margin: 0.8vw 0 0 0;
-  `
+`;
 
 export const MainContainer = styled.div`
   height: 100%;
@@ -677,6 +677,158 @@ export const IntroSelf = styled.div`
   font-size: large;
   font-weight: 900;
 `;
+/* team creating page */
+export const TeamContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+`;
+export const CreateDetail = styled.div`
+  width: 70%;
+  border-radius: 0 50px 0 0; /* 오른쪽 상단 코너에만 반지름 적용 */
+  background: #fff;
+  box-shadow: 0px 4px 27px 3px rgba(149, 149, 149, 0.21);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CreateLogo = styled.img`
+  float: right;
+`;
+
+export const LogoContainer = styled.div`
+  width: 30%;
+`;
+
+export const CreateTitle = styled.div`
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 60px;
+`;
+
+export const CreateName = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 60px;
+`;
+export const NameLabel = styled.div`
+  font-weight: 700;
+  padding-right: 40px;
+  font-size: large;
+`;
+
+export const NameBox = styled.div`
+  //  textfield
+  width: 470px;
+  height: 40px;
+  border-radius: 16px;
+  background: rgba(217, 217, 217, 0.36);
+`;
+
+export const CreateIntro = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+`;
+export const IntroLabel = styled.div`
+  font-weight: 700;
+  padding-right: 40px;
+  font-size: large;
+`;
+
+export const IntroBox = styled.div`
+  //  textfield
+  width: 470px;
+  height: 120px;
+  border-radius: 16px;
+  background: rgba(217, 217, 217, 0.36);
+`;
+
+export const CreateLeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  // padding-right: 360px;
+  padding-left: 30px;
+`;
+export const LeaderLabel = styled.div`
+  font-weight: 700;
+  font-size: large;
+  padding-right: 40px;
+`;
+
+export const LeaderBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  padding-left: 20px;
+`;
+export const CreateLeaderProfile = styled.img``;
+
+export const CreateLeaderName = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 700;
+`;
+export const CreateOkay = styled.div`
+  width: 135px;
+  height: 40px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  background: #1ad079;
+  box-shadow: 0px 9px 11.3px -1px rgba(126, 126, 126, 0.12);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 700;
+`;
+
+export const CreateTeamProject = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  // padding-right: 360px;
+  padding-left: 60px;
+`;
+export const ProjectLabel = styled.div`
+  font-weight: 700;
+  font-size: large;
+  padding-right: 40px;
+`;
+
+export const ProjectBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  padding-left: 20px;
+`;
+export const CreateProjectProfile = styled.img``;
+
+export const CreateProjectName = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 700;
+`;
+
+//
 
 /*FeedbackUsers*/
 
