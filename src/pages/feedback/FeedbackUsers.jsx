@@ -2,7 +2,7 @@ import React from "react";
 import {
   MainFeedback,
   FeedbackUsersTextBox,
-  NameBox,
+  FeedBackNameBox,
   FeedbackBox,
   FeedbackAnswer,
   UsersFeedBackType,
@@ -25,13 +25,13 @@ function FeedbackUsers() {
       <FeedbackUsersTextBox>
         피드백관리
       </FeedbackUsersTextBox>
-      <NameBox>
+      <FeedBackNameBox>
         <UserTeamProfImg src="/src/assets/images/profile/image 35.png"/>
         <TeamName>
           <Name>김준희</Name>
           <Role>피어리 마케팅 A팀</Role>
         </TeamName>
-      </NameBox>
+      </FeedBackNameBox>
       <FeedbackBox>
         <UsersFeedBackType>
           <FeedbackAnswer>

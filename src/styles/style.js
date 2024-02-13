@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import BG from "/src/assets/images/background/background.svg";
 import BG_3 from "/src/assets/images/background/background_3.svg";
+import BG_4 from "/src/assets/images/background/background_4.svg";
 import detailBackground from "/src/assets/images/result-report/reportBox.png";
 import detailBackground2 from "/src/assets/images/result-report/reportBox2.png";
 import comment1 from "/src/assets/images/result-report/말풍선1.png";
@@ -68,9 +69,8 @@ export const HeaderWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   flex-grow: 1;
-  z-index: 100;
   margin: 0;
-  background: url(${(props) => props.isBg ? BG : BG_3});
+  background: url(${(props) => props.$isbg ? (props.$istsbg ? BG : BG_4) :  (props.$istsbg ? BG_3 : BG_4)});
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -849,7 +849,7 @@ display: flex;
 flex-direction: row;
 `
 
-export const NameBox = styled.div`
+export const FeedBackNameBox = styled.div`
 pointer-events: none;
   color: black;
   margin-left: 4%;

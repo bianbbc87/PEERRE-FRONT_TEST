@@ -29,26 +29,29 @@ function App() {
   // 로그인 페이지 사이드바 숨김 함수
   const showLogin = () => {
     // 나중에 로그인 페이지 경로로 변경해주세요.
-    const showOnRoute = ["/test"];
+    const showOnRoute = ["/"];
     return !showOnRoute.includes(location.pathname);
   };
 
   // 팀 스페이스 생성 배경색 지정
   const isSpecifixBg = () => {
     // 나중에 팀 스페이스 생성 페이지로 변경해주세요.
-    const specifixBgRoute = ["/create-teamspace"];
+    const specifixBgRoute = ["/create-team", "/create-project"];
     return !specifixBgRoute.includes(location.pathname);
+  };
+
+  // 팀 스페이스 생성 배경색 지정
+  const teamSpaceBg = () => {
+    // 나중에 팀 스페이스 생성 페이지로 변경해주세요.
+    const teamSpaceBg = ["/team-space"];
+    return !teamSpaceBg.includes(location.pathname);
   };
 
   // 아래에 로그인 페이지 구현
   // 단, 아래는 예시 스타일이기 때문에 FirstMainWrapper 스타일은 적절하게 변경해주세요.
   if(!showLogin()) {
     return (
-      <MainWrapper>
-      <FirstMainWrapper>
-        <TestPage />
-      </FirstMainWrapper>
-    </MainWrapper>
+  <Home />
     )
   }
 
@@ -61,9 +64,9 @@ function App() {
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
-        <ContentWrapper isBg={isSpecifixBg()}>
+        <ContentWrapper $isbg={isSpecifixBg()} $istsbg={teamSpaceBg()}>
           <Routes>
-            {/* <Route path="/" element={<Home/>}/> */}
+            <Route path="/" element={<Home/>}/>
             <Route path="/test" element={<TestPage />} />
             <Route path="/team-report" element={<TeamReport />} />
             <Route path="/personal-report" element={<PersonalReport />} />
