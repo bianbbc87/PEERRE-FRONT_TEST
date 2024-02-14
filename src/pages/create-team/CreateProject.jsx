@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import CreateProjectApi from "../../api/createproject/CreateProjectApi";
+import ProjectIdStore from "/src/stores/projectId/ProjectIdStore.js";
+
 import {
   TeamContainer,
   CreateDetail,
@@ -22,32 +24,15 @@ function CreateProject() {
   const navigate = useNavigate();
   const location = useLocation();
   const teamspaceId = location.state.apidata;
+  const { addProjectId } = ProjectIdStore();
 
   const handleResultBoxClick = async () => {
-    const postData = {
-      teamId: teamspaceId,
-      title: projectName,
-    };
-
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcwOTkxMTQzNCwic29jaWFsSWQiOiJ0aGRkbXMyMDA5QG5hdmVyLmNvbSJ9.Kd3e8Xm2k_SgnyWMf84p7WPd9FzNwBF7VDLSD7h55my8J--xBuYNjKM8mexLg5oPVSHr7sHchssKMRNKpVPx2A`,
-      },
-    };
-
     try {
-      console.log(postData);
-      const response = await axios.post(
-        "http://13.124.90.245:8080/api/project",
-        postData,
-        config
-      );
-      console.log(response.data.data.projectId);
-
+      const projectId = await CreateProjectApi(teamspaceId, projectName);
+      addProjectId(projectId);
       navigate(`/team-report`);
     } catch (error) {
-      console.error("팀 생성 요청 중 오류가 발생했습니다:", error);
+      console.error(error.message);
     }
   };
 
