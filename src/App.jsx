@@ -9,6 +9,7 @@ import {
 } from "/src/styles/style.js";
 import SideBar from "/src/components/sidebar/SideBar";
 import Header from "/src/components/header/header";
+import TeamSpace from "./pages/team-space/TeamSpace";
 import TeamReport from "/src/pages/team-report/TeamReport";
 import ResultReport from "/src/pages/result-report/ResultReport";
 import PersonalReport from "./pages/personal-report/PersonalReport";
@@ -28,6 +29,7 @@ function App() {
         <ContentWrapper>
           <Routes>
             <Route path="/test" element={<TestPage />} />
+            <Route path="/team-space" element={<TeamSpace/>} />
             <Route path="/team-report" element={<TeamReport />} />
             <Route path="/personal-report" element={<PersonalReport />} />
             <Route path="/result-report" element={<ResultReport />} />

@@ -66,8 +66,6 @@ export const ContentWrapper = styled.div`
   height: 100%;
 `;
 
-/* team-report */
-
 export const Container = styled.div`
   box-sizing: border-box;
   position: relative;
@@ -76,7 +74,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 80px;
+  padding: 30px 50px;
   text-align: left;
 `;
 
@@ -84,94 +82,93 @@ export const Title = styled.p`
   text-align: left;
   display: flex;
   width: 100%;
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
   white-space: nowrap;
-
   pointer-events: none;
 `;
 
 export const Team_Box = styled.div`
-/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
-box-sizing: border-box;
-margin-top: 20px;
-width: 100%;
-display: flex;
-flex-direction: column;
-border-radius: 18px;
-border: 4px solid rgba(26, 208, 121, 0.5);
-text-align: left;
-padding: 20px 60px 20px 40px;
-gap: 26px;
-background-color: #fff;
+  /* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 4px solid rgba(26, 208, 121, 0.5);
+  text-align: left;
+  padding: 20px 60px 20px 40px;
+  gap: 26px;
+  background-color: #fff;
 
-p {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 export const Gaze_Box = styled.div`
-display: flex;
-font-size: 20px;
+  display: flex;
+  font-size: 20px;
 
-p {
-  margin: 0;
+  p {
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
-position: relative;
+  position: relative;
 
-box-sizing: border-box;
-margin-top: 20px;
-background-color: rgba(238, 238, 238, 0.36);
-width: 100%;
-height: 70%;
-border-radius: 18px;
-overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: rgba(238, 238, 238, 0.36);
+  width: 100%;
+  height: 70%;
+  border-radius: 18px;
+  overflow: hidden;
 
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
 /* rank_box bg가 투명도가 있어 배경색에 묻히는 문제 해결용 컴포넌트 */
 export const Rank_Box_Color = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-z-index: -1;
-`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+`;
 
 export const TitleBar = styled.div`
-display: flex;
-background-color: #fff;
-width: 100%;
-height: 50px;
-border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
-align-items: center;
-text-align: left;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
+  align-items: center;
+  text-align: left;
 
-P {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-  margin-left: 70px;
+  P {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 70px;
 
-  pointer-events: none;
-}
-`
+    pointer-events: none;
+  }
+`;
 
 export const Line = styled.hr`
   position: absolute;
@@ -531,7 +528,7 @@ export const SendButton = styled.div`
   background-position: center;
   display: flex;
   margin: 0.8vw 0 0 0;
-  `
+`;
 
 export const MainContainer = styled.div`
   height: 100%;
