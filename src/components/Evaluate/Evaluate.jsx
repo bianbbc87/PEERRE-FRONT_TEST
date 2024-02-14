@@ -12,10 +12,10 @@ const StyledReportContent = styled.div`
   margin-left: 15%;
   margin-bottom: 10px;
   font-weight: 700;
-  ${({ backgroundColor }) =>
-    backgroundColor &&
+  ${({ backgroundcolor }) =>
+    backgroundcolor &&
     css`
-      background-color: ${backgroundColor};
+      background-color: ${backgroundcolor};
     `}
   align-items: center;
 `;
@@ -31,9 +31,9 @@ const StyledCommentRate = styled.div`
 `;
 
 // Evaluate 컴포넌트
-function Evaluate({ comment, rate, backgroundColor }) {
+function Evaluate({ comment, rate, backgroundcolor }) {
   return (
-    <StyledReportContent backgroundColor={backgroundColor}>
+    <StyledReportContent backgroundcolor={backgroundcolor}>
       <StyledReportComment>{comment}</StyledReportComment>
       <StyledCommentRate>{rate}</StyledCommentRate>
     </StyledReportContent>

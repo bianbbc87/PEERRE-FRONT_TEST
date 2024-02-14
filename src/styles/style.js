@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import BG from "/src/assets/images/background/background.svg";
+import BG_3 from "/src/assets/images/background/background_3.svg";
+import BG_4 from "/src/assets/images/background/background_4.svg";
 import detailBackground from "/src/assets/images/result-report/reportBox.png";
 import detailBackground2 from "/src/assets/images/result-report/reportBox2.png";
 import comment1 from "/src/assets/images/result-report/말풍선1.png";
@@ -17,6 +19,15 @@ export const Sample = styled.div`
 `;
 
 /* 전체(수정 X) */
+export const FirstMainWrapper = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+`;
+
 export const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
@@ -49,7 +60,7 @@ export const RightBody = styled.div`
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  min-height: 10%;
+  min-height: 80px;
   background-color: #fff;
   margin: 0;
   box-shadow: 0px 0px 12.9px 1px rgba(0, 0, 0, 0.2);
@@ -58,15 +69,13 @@ export const HeaderWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   flex-grow: 1;
-  z-index: 100;
   margin: 0;
-  background: url(${BG});
+  background: url(${(props) =>
+    props.$isbg ? (props.$istsbg ? BG : BG_4) : props.$istsbg ? BG_3 : BG_4});
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 `;
-
-/* team-report */
 
 export const Container = styled.div`
   box-sizing: border-box;
@@ -76,7 +85,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 80px;
+  padding: 30px 50px;
   text-align: left;
 `;
 
@@ -84,94 +93,93 @@ export const Title = styled.p`
   text-align: left;
   display: flex;
   width: 100%;
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
   white-space: nowrap;
-
   pointer-events: none;
 `;
 
 export const Team_Box = styled.div`
-/* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
-box-sizing: border-box;
-margin-top: 20px;
-width: 100%;
-display: flex;
-flex-direction: column;
-border-radius: 18px;
-border: 4px solid rgba(26, 208, 121, 0.5);
-text-align: left;
-padding: 20px 60px 20px 40px;
-gap: 26px;
-background-color: #fff;
+  /* 전체 너비는 그대로, 내부 여백만 추가, box-sizing */
+  box-sizing: border-box;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 4px solid rgba(26, 208, 121, 0.5);
+  text-align: left;
+  padding: 20px 60px 20px 40px;
+  gap: 26px;
+  background-color: #fff;
 
-p {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 export const Gaze_Box = styled.div`
-display: flex;
-font-size: 20px;
+  display: flex;
+  font-size: 20px;
 
-p {
-  margin: 0;
+  p {
+    margin: 0;
 
-  pointer-events: none;
-}
+    pointer-events: none;
+  }
 `;
 
 /* team-report > rank */
 
 export const Rank_Box = styled.div`
-position: relative;
+  position: relative;
 
-box-sizing: border-box;
-margin-top: 20px;
-background-color: rgba(238, 238, 238, 0.36);
-width: 100%;
-height: 70%;
-border-radius: 18px;
-overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: rgba(238, 238, 238, 0.36);
+  width: 100%;
+  height: 70%;
+  border-radius: 18px;
+  overflow: hidden;
 
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
 /* rank_box bg가 투명도가 있어 배경색에 묻히는 문제 해결용 컴포넌트 */
 export const Rank_Box_Color = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-z-index: -1;
-`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+`;
 
 export const TitleBar = styled.div`
-display: flex;
-background-color: #fff;
-width: 100%;
-height: 50px;
-border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
-align-items: center;
-text-align: left;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(7, 19, 59, 0.6); /* #07133B의 60% */
+  align-items: center;
+  text-align: left;
 
-P {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-  margin-left: 70px;
+  P {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 70px;
 
-  pointer-events: none;
-}
-`
+    pointer-events: none;
+  }
+`;
 
 export const Line = styled.hr`
   position: absolute;
@@ -531,7 +539,9 @@ export const SendButton = styled.div`
   background-position: center;
   display: flex;
   margin: 0.8vw 0 0 0;
-  `
+`;
+
+//personal-report
 
 export const MainContainer = styled.div`
   height: 100%;
@@ -544,7 +554,8 @@ export const HeaderBox = styled.div`
   // border: 1px solid black;
   color: black;
   margin-left: 4%;
-  margin-top: 3%;
+  margin-top: 1.5%;
+  margin-bottom: 0.5%;
   font-size: xx-large;
   font-weight: 700;
   display: flex;
@@ -554,12 +565,11 @@ export const HeaderBox = styled.div`
 export const SelfBox = styled.div`
   color: black;
   margin-left: 4%;
-  margin-top: 2%;
   font-size: xx-large;
   font-weight: 700;
   background-color: white;
   border-radius: 10px;
-  height: 20%;
+  height: 15%;
   margin-right: 4%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -576,7 +586,8 @@ export const ReportBox = styled.div`
   background-color: white;
   border-radius: 10px;
   justify-content: space-evenly;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 
@@ -589,23 +600,23 @@ export const FeedBackType = styled.div`
 
 export const ReportName = styled.div`
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   font-size: x-large;
   font-weight: 700;
   color: ${({ color }) => color};
 `;
 
 export const Evaluate = styled.div`
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 `;
 
 export const ContentLine = styled.div`
   // height: 50%;
   width: 1%;
   border-right: 1.5px solid #07133b80;
-  margin-top: 5%;
+  margin-top: 7%;
 
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 `;
 
 export const Highlight1 = styled.span`
@@ -624,7 +635,7 @@ export const UpdateBox = styled.div`
   background: #fff;
   height: 60%;
   margin-top: 1%;
-  padding: 7px;
+  // padding: 1%;
 
   white-space: nowrap;
 `;
@@ -649,7 +660,7 @@ export const ProfImg = styled.img`
 export const ProfName = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 2.5%;
+  margin-top: 1.5%;
   margin-bottom: 2%;
 `;
 
@@ -666,4 +677,464 @@ export const IntroSelf = styled.div`
   margin: auto 0 auto 4%;
   font-size: large;
   font-weight: 900;
+`;
+/* team creating page */
+export const TeamContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+`;
+export const CreateDetail = styled.div`
+  width: 70%;
+  border-radius: 0 50px 0 0; /* 오른쪽 상단 코너에만 반지름 적용 */
+  background: #fff;
+  box-shadow: 0px 4px 27px 3px rgba(149, 149, 149, 0.21);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CreateLogo = styled.img`
+  float: right;
+`;
+
+export const LogoContainer = styled.div`
+  width: 30%;
+`;
+
+export const CreateTitle = styled.div`
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 5%;
+`;
+
+export const CreateName = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5%;
+  width: 70%;
+`;
+export const NameLabel = styled.div`
+  font-weight: 700;
+  padding-right: 40px;
+  font-size: large;
+  white-space: nowrap;
+`;
+
+export const NameInput = styled.input`
+  //  textfield
+  width: 74%;
+  // height: 40px;
+  padding-bottom: 6%;
+  border-radius: 16px;
+  background: rgba(217, 217, 217, 0.36);
+  text-align: center;
+`;
+
+export const CreateIntro = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5%;
+  width: 70%;
+`;
+export const IntroLabel = styled.div`
+  font-weight: 700;
+  padding-right: 40px;
+  font-size: large;
+  white-space: nowrap;
+`;
+
+export const IntroInput = styled.input`
+  //  textfield
+  width: 74%;
+  // height: 120px;
+  border-radius: 16px;
+  padding-bottom: 20%;
+  background: rgba(217, 217, 217, 0.36);
+  text-align: center;
+`;
+
+export const CreateLeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  width: 70%;
+`;
+export const LeaderLabel = styled.div`
+  font-weight: 700;
+  font-size: large;
+  padding-right: 10%;
+  white-space: nowrap;
+`;
+
+export const LeaderBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  padding-right: 8%;
+`;
+export const CreateLeaderProfile = styled.img``;
+
+export const CreateLeaderName = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 700;
+`;
+export const CreateOkay = styled.div`
+  width: 135px;
+  height: 40px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  background: #1ad079;
+  box-shadow: 0px 9px 11.3px -1px rgba(126, 126, 126, 0.12);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 700;
+`;
+
+export const CreateTeamProject = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 60px;
+  width: 70%;
+  padding-bottom: 10%;
+`;
+export const ProjectLabel = styled.div`
+  font-weight: 700;
+  font-size: large;
+  padding-right: 40px;
+  white-space: nowrap;
+`;
+
+export const ProjectBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 470px;
+  padding-left: 20px;
+  white-space: nowrap;
+`;
+export const CreateProjectProfile = styled.img``;
+
+export const CreateProjectName = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 700;
+`;
+
+//
+
+/*FeedbackUsers*/
+
+export const MainFeedback = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+`;
+export const FeedbackUsersTextBox = styled.div`
+  pointer-events: none;
+  color: black;
+  margin-left: 4%;
+  margin-top: 1%;
+  font-size: xx-large;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const FeedBackNameBox = styled.div`
+  pointer-events: none;
+  color: black;
+  margin-left: 4%;
+  margin-top: 1%;
+  background-color: white;
+  border-radius: 10px;
+  height: 15%;
+  width: 300px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  font-size: xx-large;
+  align-items: center;
+  padding-left: 1%;
+  white-space: nowrap;
+`;
+
+export const Name = styled.div`
+  pointer-events: none;
+  font-size: x-large;
+  font-weight: 900;
+`;
+export const Role = styled.div`
+  pointer-events: none;
+  font-size: medium;
+  margin-top: 6%;
+  font-weight: 550;
+`;
+export const UserTeamProfImg = styled.img`
+  pointer-events: none;
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 50%;
+  height: 82%;
+  margin-left: 3%;
+  margin-right: 1%;
+`;
+
+export const Assess1 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 11%;
+  margin-bottom: 2%;
+  font-weight: 700;
+  height: 12%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  &:active {
+    background-color: #1ad079b2;
+  }
+`;
+export const Assess2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 11%;
+  margin-bottom: 2%;
+  font-weight: 700;
+  height: 12%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  &:active {
+    background-color: #ffa471;
+  }
+`;
+
+export const FeedbackLine = styled.div`
+  pointer-events: none;
+  width: 1%;
+  height: 69%;
+  border-right: 1.5px solid #07133b80;
+  margin-top: 5%;
+`;
+export const Button = styled.div`
+  cursor: pointer;
+  background-color: #e6e6e6b8;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6.099999904632568px -1px #00000033;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13%;
+  height: 11.5%;
+  margin-left: 95%;
+  margin-bottom: 2%;
+  &:active {
+    background-color: #868686;
+  }
+`;
+export const Block = styled.div`
+  width: 13%;
+  height: 11.5%;
+`;
+
+export const FeedbackBox = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+
+export const UsersFeedBackType = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+`;
+
+export const TeamName = styled.div`
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+`;
+
+export const FeedbackAnswer = styled.div`
+  pointer-events: none;
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+  font-size: x-large;
+  font-weight: 700;
+  color: ${({ color }) => color};
+`;
+/*Feedback*/
+
+export const MainCheck = styled.div`
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  margin: 0;
+`;
+export const MyFeedbackBox = styled.div`
+  height: 100%;
+  flex-direction: row;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: end;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+export const FeedbackTextBox = styled.div`
+  color: black;
+  margin-left: 4%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: xx-large;
+  font-weight: 700;
+  display: flex;
+`;
+// export const FeedbackDesign = styled.img`
+// position: absolute;
+
+//`
+export const YesNoBox = styled.div`
+  display: flex;
+  height: 10%;
+  padding-top: 2%;
+  flex-direction: row;
+  justify-content: end;
+  white-space: nowrap;
+`;
+export const Yes = styled.span`
+  color: #1ad079;
+`;
+
+export const No = styled.span`
+  color: #ff7d33;
+`;
+export const TextFeedback1 = styled.span`
+  font-weight: 700;
+  font-size: x-large;
+  margin-right: 15%;
+`;
+export const TextFeedback2 = styled.span`
+  font-weight: 700;
+  font-size: x-large;
+  padding-right: 13%;
+`;
+export const Person = styled.div`
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+`;
+export const TeamProfImg = styled.img`
+  background: lightgray 50% / cover no-repeat;
+  border-radius: 50%;
+  height: 82%;
+  margin-left: 3%;
+  margin-right: 1%;
+`;
+export const Who = styled.div`
+  margin-right: 1%;
+  margin-left: 1%;
+`;
+export const FeedbackLLine = styled.div`
+  width: 0.08%;
+  height: 300px;
+  margin-left: 5%;
+  margin-top: 3%;
+  background-color: #07133b80;
+  opacity: 0.5;
+`;
+export const Team = styled.div``;
+export const MemberName = styled.div`
+  font-weight: 700;
+  font-size: x-large;
+  margin-bottom: 8%;
+`;
+export const How = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e4e4e454;
+  width: 550px;
+  height: 120px;
+  border-radius: 21px;
+  margin-left: 15%;
+  font-weight: 700;
+`;
+export const FeedbackList1 = styled.span`
+posiroom' lwfrSWWWW
+padding-right: 5%;
+`;
+export const FeedbackList2 = styled.span``;
+
+/*Home*/
+export const HomeContainer = styled.div`
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url("/src/assets/images/background/Rectangle 44.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+export const HomeBox = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 2%;
+  background-color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+export const LogoImg = styled.img`
+  display: block;
+  width: 400px;
+  height: auto; /* 가로 세로 비율 유지 */
+`;
+export const MotoImg = styled.img`
+  display: block;
+  width: 400px;
+  height: auto;
+`;
+export const HomeLogo = styled.div`
+  margin-bottom: 15%;
 `;
