@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import {
   MainContainer,
   HeaderBox,
@@ -21,6 +22,31 @@ import {
 import Evaluate from "/src/components/Evaluate/Evaluate.jsx";
 
 function PersonalReport() {
+  useEffect(() => {
+    // 페이지 렌더링 시 GET 요청 보내기
+    sendGetRequest();
+  }, []);
+
+  const sendGetRequest = async () => {
+    try {
+      const projectId = 1; // 프로젝트 ID
+
+      const response = await axios.get(
+        `http://13.124.90.245:8080/api/projects/${projectId}/my-report`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcwOTkxMTQzNCwic29jaWFsSWQiOiJ0aGRkbXMyMDA5QG5hdmVyLmNvbSJ9.Kd3e8Xm2k_SgnyWMf84p7WPd9FzNwBF7VDLSD7h55my8J--xBuYNjKM8mexLg5oPVSHr7sHchssKMRNKpVPx2A`,
+          },
+        }
+      );
+
+      console.log(response);
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <MainContainer>
       <HeaderBox>
