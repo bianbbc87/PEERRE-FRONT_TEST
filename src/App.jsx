@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import TestPage from "/src/pages/test/TestPage.jsx";
 import {
   ContentWrapper,
@@ -26,6 +27,15 @@ import { FirstMainWrapper } from "./styles/style";
 // route 설정 해주세요
 // 경로 "/"는 추후 각자 설정해주세요.
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // 경로 변경 시 배경 이미지 변경
+    showLogin();
+    isSpecifixBg();
+    teamSpaceBg();
+  }, [location]); 
 
   // 로그인 페이지 사이드바 숨김 함수
   const showLogin = () => {
