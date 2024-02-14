@@ -9,6 +9,7 @@ import S_T_S from "/src/assets/images/sidebar/selected_team_space.svg";
 
 export default function SideBar() {
     const navigate = useNavigate();
+
     const [selected, setSelected] = useState(99);
 
     const getPath = (index) => {
@@ -29,6 +30,12 @@ export default function SideBar() {
     const getNavigate = (index) => () => {
       navigate(getPath(index));
       setSelected(index);
+    }
+
+    const logout = () => {
+      // accesstoken 삭제
+      localStorage.removeItem("accessToken");
+      alert("로그아웃");
     }
 
   return (
@@ -64,7 +71,7 @@ export default function SideBar() {
     </ButtonListBox>
     <HelperBox>
     <Hr $bottom="20px"/>
-            <div onClick={() => alert("로그아웃 버튼을 클릭하였습니다. ")}>
+            <div onClick={() => logout()}>
             <HelperButton text="로그아웃" index={1}/>
             </div>
         </HelperBox>
