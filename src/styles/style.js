@@ -77,8 +77,6 @@ export const ContentWrapper = styled.div`
   height: 100%;
 `;
 
-/* team-report */
-
 export const Container = styled.div`
   box-sizing: border-box;
   position: relative;
@@ -87,7 +85,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 80px;
+  padding: 30px 50px;
   text-align: left;
 `;
 
@@ -95,11 +93,10 @@ export const Title = styled.p`
   text-align: left;
   display: flex;
   width: 100%;
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
   white-space: nowrap;
-
   pointer-events: none;
 `;
 
