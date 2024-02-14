@@ -142,7 +142,7 @@ export default function TeamSpace() {
               <Team_Select key={index}>
                 {team.Team_Position === "팀장" ? (
                   <Check_Box
-                    imageUrl={
+                    $imageurl={
                       team.Team_Selected === "yes"
                         ? CheckedButton
                         : NoncheckedButton
@@ -209,7 +209,7 @@ export default function TeamSpace() {
             <Project_Box key={index}>
               <Project_State>
                 <TickBoxImg
-                  imageUrl={
+                  $imageurl={
                     project.projectState === "종료됨"
                       ? TickBoxImage
                       : SaturationImage
@@ -344,7 +344,7 @@ const Check_Box = styled.div`
   box-sizing: border-box;
   width: 25px;
   height: 25px;
-  background-image: url(${(props) => props.imageUrl});
+  background-image: url(${(props) => props.$imageurl});
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
@@ -503,7 +503,7 @@ const TickBoxImg = styled.div`
   box-sizing: border-box;
   width: 24px;
   height: 24px;
-  background-image: url(${(props) => props.imageUrl});
+  background-image: url(${(props) => props.$imageurl});
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
