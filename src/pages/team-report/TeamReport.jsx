@@ -9,44 +9,35 @@ import {
   Line,
 } from "/src/styles/style";
 import CustomizedProgressBars from "/src/components/team-report/gauge/BorderLinearProgress";
-import PersonalBar from "../../components/team-report/rank_table/PersonalBar";
+import PersonalBar from "/src/components/team-report/rank_table/PersonalBar";
 import { useState, useEffect } from "react";
-import axios from 'axios';
+import getTeamInfo from "/src/api/team-report/getTeamInfo";
+import { dummy } from "/src/data/team-report/dummy";
 
 export default function TeamReport() {
-  // 더미 데이터
-  // 이름, 개수
-  const teamMembers = [
-    { name: "김서희", value: 75 },
-    { name: "진서희", value: 72 },
-    { name: "박서희", value: 70 },
-    { name: "최서희", value: 68 },
-    { name: "신서희", value: 63 },
-    { name: "유서희", value: 55 },
-  ];
 
-  const [data, setData] = useState();
+  // 임시 더미 데이터
+  const [data, setData] = useState(dummy.data);
+  console.log(data);
+
+  // 프로젝트 id
   const [projectid, setProjectId] = useState(10);
-
-  useEffect(() => {
+  const accessToken = localStorage.getItem("accessToken");
+  
+/*  useEffect(() => {
     const getData = async () => {
       try {
-        // 여기서 'your-api-url'을 실제 API URL로 대체합니다.
-        const response = await axios.get('http://13.124.90.245:8080/api/projects/1/team-report', projectid, {
-          headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcwOTkxMTQzNCwic29jaWFsSWQiOiJ0aGRkbXMyMDA5QG5hdmVyLmNvbSJ9.Kd3e8Xm2k_SgnyWMf84p7WPd9FzNwBF7VDLSD7h55my8J--xBuYNjKM8mexLg5oPVSHr7sHchssKMRNKpVPx2A',
-            'Content-Type': 'application/json'
-          }
-        });
-        setData(response.data); 
-        console.log(response.data);
+        const response = await getTeamInfo(accessToken, projectid);
+        console.log(response);
+        setData(response);
       } catch(error) {
         console.log(error);
       }
-    }
+  }
 
-    getData();
+  getData();
   }, []);
+  */
 
   const [selected, setSelected] = useState(99);
 
@@ -54,19 +45,20 @@ export default function TeamReport() {
     setSelected(index);
   };
 
+  // {teamMembers.map((member) => member.name).join(", ")}
   return (
     <Container>
       <Title>팀 리포트</Title>
       <Team_Box>
-        <p>팀 이름: PEER:Re</p>
-        <p>팀원: {teamMembers.map((member) => member.name).join(", ")}</p>
+        <p>팀 이름: {data.teamInfo.teamName} </p>
+        <p>팀원: {data.teamInfo.teamUserNames.map((member) => member).join(", ")}</p>
         <Gaze_Box>
           <div>
             <p style={{ margin: "0 20px 0 0", whiteSpace: "nowrap" }}>
               동료평가 참여율
             </p>
           </div>
-          <CustomizedProgressBars value={50} />
+          <CustomizedProgressBars value={data.teamInfo.evaluationProgress} />
         </Gaze_Box>
       </Team_Box>
       <Rank_Box>
@@ -75,14 +67,19 @@ export default function TeamReport() {
         <TitleBar>
           <p>YES 피드백 순위</p>
         </TitleBar>
-        {teamMembers.map((member, index) => (
-          <PersonalBar
-            key={index}
-            index={index}
-            value={member.value}
-            selected={selected}
-            onClick={selectBar(index)}
-          />
+        {data.teamFeedbackInfoList
+          .slice() // 복사본 생성
+          .sort((a, b) => a.rank - b.rank) // 오름 차순 정렬
+          .map((member, index) => (
+            <PersonalBar
+              key={index} 
+              rank={member.rank}
+              index={index}
+              value={member.yesFeedbackNum}
+              selected={selected}
+              onClick={selectBar(index)}
+              feedbacks={member.goodFeedbackContent}
+            />
         ))}
       </Rank_Box>
     </Container>

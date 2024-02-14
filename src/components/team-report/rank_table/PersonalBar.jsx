@@ -7,7 +7,7 @@ import LankGuage from "../gauge/RankGauge";
 // 배경색 테마 배열 #eeeeee의 투명도 36% 값
 const bgColors = ['#FCEFE9', 'transparent'];
 
-export default function PersonalBar({index, value, selected, onClick}) {
+export default function PersonalBar({rank, index, value, selected, onClick, feedbacks}) {
 
     const getBGColor = (index, selected) => {
         if(index == selected) {
@@ -20,7 +20,7 @@ export default function PersonalBar({index, value, selected, onClick}) {
   return (
     <BarWrapper $bg={getBGColor(index, selected)} onClick={onClick}>
         <CountBox>
-            {index + 1}
+            {rank}
         </CountBox>
         <Thumb />
         <LankGuage value={value}/>
@@ -30,13 +30,13 @@ export default function PersonalBar({index, value, selected, onClick}) {
         </Gap>
         <TagBox>
        <Tag>
-        #친절함
+        #{feedbacks[0]}
        </Tag>
        <Tag>
-        #적극적
+        #{feedbacks[1]}
        </Tag>
        <Tag>
-        #빠른답장
+        #{feedbacks[2]}
        </Tag>
         </TagBox>
     </BarWrapper>
@@ -112,8 +112,10 @@ pointer-events: none;
 `
 
 PersonalBar.propTypes = {
+    rank: PropTypes.number,
     index: PropTypes.number,
     value: PropTypes.number,
     selected: PropTypes.number,
     onClick: PropTypes.func,
+    feedbacks: PropTypes.array,
   };
