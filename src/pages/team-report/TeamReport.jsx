@@ -17,14 +17,15 @@ export default function TeamReport() {
   ]
 
   const [data, setData] = useState();
+  const [projectid, setProjectId] = useState(10);
 
   useEffect(() => {
     const getData = async () => {
       try {
         // 여기서 'your-api-url'을 실제 API URL로 대체합니다.
-        const response = await axios.get('http://13.124.90.245:8080/api/projects/1/team-report', {
+        const response = await axios.get('http://13.124.90.245:8080/api/projects/1/team-report', projectid, {
           headers: {
-            'Authorization': 'Bearer token',
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcwOTkxMTQzNCwic29jaWFsSWQiOiJ0aGRkbXMyMDA5QG5hdmVyLmNvbSJ9.Kd3e8Xm2k_SgnyWMf84p7WPd9FzNwBF7VDLSD7h55my8J--xBuYNjKM8mexLg5oPVSHr7sHchssKMRNKpVPx2A',
             'Content-Type': 'application/json'
           }
         });
@@ -34,6 +35,8 @@ export default function TeamReport() {
         console.log(error);
       }
     }
+
+    getData();
   }, []);
 
   const [selected, setSelected] = useState(99);
