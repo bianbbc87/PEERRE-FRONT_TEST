@@ -11,6 +11,10 @@ import profileImg1 from "/src/assets/images/result-report/미모티콘1.png";
 // import profileImg2 from "/src/assets/images/result-report/미모티콘2.png";
 // import profileImg3 from "/src/assets/images/result-report/미모티콘3.png";
 import sendButton from "/src/assets/images/result-report/전송버튼.png";
+import KakaoButtonImage from "/src/assets/images/login/kakaologin.svg";
+import HomeBgImage from "/src/assets/images/login/home_bg.svg";
+import HomeLogoImage from "/src/assets/images/login/logo.svg";
+import HomeExplain from "/src/assets/images/login/moto.svg";
 
 // 페이지별로 용도 나눠주세요
 /**  샘플 페이지 스타일 **/
@@ -1107,34 +1111,58 @@ export const FeedbackList2 = styled.span``;
 
 /*Home*/
 export const HomeContainer = styled.div`
-  pointer-events: none;
-  height: 100%;
+position: relative;
+width: 100%;
+height: 100%;
   display: flex;
-  flex-direction: row;
-  background-image: url("/src/assets/images/background/Rectangle 44.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
 `;
+
+export const HomeBg = styled.div`
+box-sizing: border-box;
+position: absolute;
+top: 0;
+left: 0;
+background: url(${HomeBgImage});
+min-width: 100%;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+padding: 30px;
+`;
+
 export const HomeBox = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 2%;
-  background-color: white;
+  min-width: 800px;
+  height: 100%;
+  background-color: #ffffff;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 `;
-export const LogoImg = styled.img`
-  display: block;
-  width: 400px;
-  height: auto; /* 가로 세로 비율 유지 */
+export const LogoImg = styled.div`
+background: url(${HomeLogoImage});
+width: 523px;
+height: 200px;
+background-repeat: no-repeat;
 `;
-export const MotoImg = styled.img`
-  display: block;
-  width: 400px;
-  height: auto;
+export const MotoImg = styled.div`
+margin-top: 20px;
+background: url(${HomeExplain});
+width: 600px;
+height: 40px;
+background-repeat: no-repeat;
 `;
-export const HomeLogo = styled.div`
-  margin-bottom: 15%;
+
+export const LoginButton = styled.div`
+margin-top: 50px;
+  background: url(${KakaoButtonImage});
+  width: 373px;
+  height: 88px;
+  background-repeat: no-repeat;
 `;
+
