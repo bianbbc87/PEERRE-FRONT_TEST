@@ -12,7 +12,7 @@ import profileImg1 from "/src/assets/images/result-report/미모티콘1.png";
 // import profileImg3 from "/src/assets/images/result-report/미모티콘3.png";
 import sendButton from "/src/assets/images/result-report/전송버튼.png";
 import KakaoButtonImage from "/src/assets/images/login/kakaologin.svg";
-import HomeBgImage from "/src/assets/images/login/home_bg.svg";
+import HomeBgImage from "/src/assets/images/login/background.png";
 import HomeLogoImage from "/src/assets/images/login/logo.svg";
 import HomeExplain from "/src/assets/images/login/moto.svg";
 
