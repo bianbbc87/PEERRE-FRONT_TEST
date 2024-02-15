@@ -136,7 +136,7 @@ function PersonalReport() {
         개인리포트
         <UpdateBox>
           <UpdateImg src="src/assets/images/updatetime/Time.png" />
-          <UpdateTime>최종 업데이트 : 14:00</UpdateTime>
+          <UpdateTime>최종 업데이트 : {updateTime}</UpdateTime>
         </UpdateBox>
       </HeaderBox>
       {/* */}
