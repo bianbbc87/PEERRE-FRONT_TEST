@@ -24,7 +24,9 @@ export default function PersonalBar({rank, index, value, selected, onClick, feed
         </CountBox>
         <Thumb />
         <LankGuage value={value}/>
-        <ThumbFill />
+        <ThumbFill>
+            <img src={Thumb_fillImage} alt="Background Image" />
+        </ThumbFill>
         <Gap $left="20px">
         {value}개
         </Gap>
@@ -61,8 +63,10 @@ color: #07133B;
 `
 
 export const Thumb = styled.div`
-background: url(${ThumbImage});
+background-image: url(${ThumbImage});
 min-width: 31px;
+width: 31px;
+height: 31px;
 min-height: 28px;
 background-repeat: no-repeat;
 
@@ -71,12 +75,16 @@ margin-right: 10px;
 `
 
 export const ThumbFill = styled.div`
-background: url(${Thumb_fillImage});
-min-width: 31px;
-min-height: 28px;
-background-repeat: no-repeat;
 
 margin-left: 10px;
+
+img {
+    min-width: 31px;
+width: 31px;
+height: 28px;
+min-height: 28px;
+background-repeat: no-repeat;
+}
 `
 
 export const Gap = styled.div`
