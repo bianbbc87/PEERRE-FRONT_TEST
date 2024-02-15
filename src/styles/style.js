@@ -646,14 +646,15 @@ export const UpdateImg = styled.img`
 
 export const UpdateTime = styled.div`
   font-size: medium;
-  font-weight: 548;
+  font-weight: 600;
   margin: auto 20px;
 `;
 
 export const ProfImg = styled.img`
   background: lightgray 50% / cover no-repeat;
   border-radius: 50%;
-  height: 82%;
+  height: 75px;
+  width: 75px;
   margin: auto 4%;
 `;
 
