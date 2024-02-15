@@ -1132,10 +1132,24 @@ background-size: cover;
 background-repeat: no-repeat;
 z-index: 10;
 
+box-sizing: border-box;
+padding: 30px;
+
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+`;
+
+export const HomeBox = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #ffffff;
+border-radius: 27px;
 `;
 
 export const LogoImg = styled.div`

@@ -1,5 +1,6 @@
 import React from 'react';
 import { HomeContainer, LogoImg, MotoImg, LoginButton, HomeBg } from '/src/styles/style';
+import { HomeBox } from '../../styles/style';
 
 const Home = () => {
 
@@ -13,9 +14,11 @@ const Home = () => {
     return (
             <HomeContainer>
                 <HomeBg>
+                    <HomeBox>
                         <LogoImg />
                         <MotoImg />
                     <LoginButton onClick={handleLogin} />
+                    </HomeBox>
                     </HomeBg>
             </HomeContainer>
     );
