@@ -1121,11 +1121,10 @@ height: 100vh;
 display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
 `;
 
 export const HomeBg = styled.div`
-background: url(${HomeBgImage});
+background-image: url(${HomeBgImage});
 width: 100%;
 height: 100%;
 min-height: 100%;
