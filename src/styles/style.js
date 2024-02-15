@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BG from "/src/assets/images/background/background.svg";
+import BG from "/src/assets/images/background/background.png";
 import BG_3 from "/src/assets/images/background/background_3.svg";
 import BG_4 from "/src/assets/images/background/background_4.svg";
 import detailBackground from "/src/assets/images/result-report/reportBox.png";
