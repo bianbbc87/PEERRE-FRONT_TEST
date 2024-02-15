@@ -1116,7 +1116,7 @@ export const FeedbackList2 = styled.span``;
 export const HomeContainer = styled.div`
 position: relative;
 width: 100%;
-height: 100%;
+height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1124,11 +1124,9 @@ height: 100%;
 
 export const HomeBg = styled.div`
 box-sizing: border-box;
-position: absolute;
-top: 0;
-left: 0;
 background: url(${HomeBgImage});
 min-width: 100%;
+width: 100%;
 height: 100vh;
 background-size: cover;
 background-repeat: no-repeat;
