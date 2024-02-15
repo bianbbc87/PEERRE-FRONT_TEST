@@ -1115,36 +1115,30 @@ export const FeedbackList2 = styled.span``;
 /*Home*/
 export const HomeContainer = styled.div`
 position: relative;
-width: 100%;
+margin: 0 auto;
+width: 100vw;
 height: 100vh;
-  display: flex;
+display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: red;
 `;
 
 export const HomeBg = styled.div`
-box-sizing: border-box;
 background: url(${HomeBgImage});
-min-width: 100%;
 width: 100%;
-height: 100vh;
+height: 100%;
+min-height: 100%;
 background-size: cover;
 background-repeat: no-repeat;
-padding: 30px;
+z-index: 10;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 `;
 
-export const HomeBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-width: 800px;
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-`;
 export const LogoImg = styled.div`
 background: url(${HomeLogoImage});
 width: 523px;
